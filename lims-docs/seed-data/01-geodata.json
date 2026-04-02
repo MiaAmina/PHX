@@ -1,0 +1,98 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "Somalia / Soomaaliya",
+      "photo": null
+    },
+    {
+      "id": 2,
+      "name": "Djibouti / Jabuuti",
+      "photo": null
+    },
+    {
+      "id": 3,
+      "name": "Ethiopia / Itoobiya",
+      "photo": null
+    },
+    {
+      "id": 4,
+      "name": "Kenya",
+      "photo": null
+    }
+  ],
+  "regions": [
+    { "id": 1, "name": "Banaadir", "countryId": 1, "photo": null },
+    { "id": 2, "name": "Mudug", "countryId": 1, "photo": null },
+    { "id": 3, "name": "Nugaal", "countryId": 1, "photo": null },
+    { "id": 4, "name": "Bari", "countryId": 1, "photo": null },
+    { "id": 5, "name": "Bay", "countryId": 1, "photo": null },
+    { "id": 6, "name": "Jubbada Hoose (Lower Juba)", "countryId": 1, "photo": null },
+    { "id": 7, "name": "Jubbada Dhexe (Middle Juba)", "countryId": 1, "photo": null },
+    { "id": 8, "name": "Shabelle Hoose (Lower Shabelle)", "countryId": 1, "photo": null },
+    { "id": 9, "name": "Shabelle Dhexe (Middle Shabelle)", "countryId": 1, "photo": null },
+    { "id": 10, "name": "Hiiraan", "countryId": 1, "photo": null },
+    { "id": 11, "name": "Bakool", "countryId": 1, "photo": null },
+    { "id": 12, "name": "Gedo", "countryId": 1, "photo": null },
+    { "id": 13, "name": "Galgaduud", "countryId": 1, "photo": null },
+    { "id": 14, "name": "Sanaag", "countryId": 1, "photo": null },
+    { "id": 15, "name": "Sool", "countryId": 1, "photo": null },
+    { "id": 16, "name": "Awdal", "countryId": 1, "photo": null },
+    { "id": 17, "name": "Woqooyi Galbeed", "countryId": 1, "photo": null },
+    { "id": 18, "name": "Togdheer", "countryId": 1, "photo": null }
+  ],
+  "districts": [
+    { "id": 1, "dname": "Hodan", "regionId": 1, "photo": null },
+    { "id": 2, "dname": "Wadajir", "regionId": 1, "photo": null },
+    { "id": 3, "dname": "Hamar Weyne", "regionId": 1, "photo": null },
+    { "id": 4, "dname": "Hamar Jajab", "regionId": 1, "photo": null },
+    { "id": 5, "dname": "Shangaani", "regionId": 1, "photo": null },
+    { "id": 6, "dname": "Abdiaziz", "regionId": 1, "photo": null },
+    { "id": 7, "dname": "Bondhere", "regionId": 1, "photo": null },
+    { "id": 8, "dname": "Wardhiigleey", "regionId": 1, "photo": null },
+    { "id": 9, "dname": "Dayniile", "regionId": 1, "photo": null },
+    { "id": 10, "dname": "Dharkenley", "regionId": 1, "photo": null },
+    { "id": 11, "dname": "Howl Wadaag", "regionId": 1, "photo": null },
+    { "id": 12, "dname": "Kaaraan", "regionId": 1, "photo": null },
+    { "id": 13, "dname": "Shibis", "regionId": 1, "photo": null },
+    { "id": 14, "dname": "Waberi", "regionId": 1, "photo": null },
+    { "id": 15, "dname": "Xamar Weyne", "regionId": 1, "photo": null },
+    { "id": 16, "dname": "Yaqshid", "regionId": 1, "photo": null },
+    { "id": 17, "dname": "Gaalkacyo", "regionId": 2, "photo": null },
+    { "id": 18, "dname": "Garoowe", "regionId": 3, "photo": null },
+    { "id": 19, "dname": "Boosaaso", "regionId": 4, "photo": null },
+    { "id": 20, "dname": "Baydhaba (Baidoa)", "regionId": 5, "photo": null },
+    { "id": 21, "dname": "Kismaayo", "regionId": 6, "photo": null },
+    { "id": 22, "dname": "Beledweyne", "regionId": 10, "photo": null },
+    { "id": 23, "dname": "Dhuusamarreeb", "regionId": 13, "photo": null },
+    { "id": 24, "dname": "Garbahaarey", "regionId": 12, "photo": null }
+  ],
+  "cities": [
+    { "id": 1, "name": "Mogadishu (Muqdisho)", "districtId": 1, "photo": null },
+    { "id": 2, "name": "Hodan", "districtId": 1, "photo": null },
+    { "id": 3, "name": "Wadajir", "districtId": 2, "photo": null },
+    { "id": 4, "name": "Hamar Weyne", "districtId": 3, "photo": null },
+    { "id": 5, "name": "Hamar Jajab", "districtId": 4, "photo": null },
+    { "id": 6, "name": "Shangaani", "districtId": 5, "photo": null },
+    { "id": 7, "name": "Gaalkacyo", "districtId": 17, "photo": null },
+    { "id": 8, "name": "Garoowe", "districtId": 18, "photo": null },
+    { "id": 9, "name": "Boosaaso", "districtId": 19, "photo": null },
+    { "id": 10, "name": "Baydhaba (Baidoa)", "districtId": 20, "photo": null },
+    { "id": 11, "name": "Kismaayo", "districtId": 21, "photo": null },
+    { "id": 12, "name": "Beledweyne", "districtId": 22, "photo": null },
+    { "id": 13, "name": "Dhuusamarreeb", "districtId": 23, "photo": null },
+    { "id": 14, "name": "Garbahaarey", "districtId": 24, "photo": null }
+  ],
+  "neighborhoods": [
+    { "id": 1, "name": "Taleex", "cityId": 2, "presumedValue": 85000, "lower": 50000, "higher": 120000, "band": "C", "midpointValue": 85000 },
+    { "id": 2, "name": "Suuqa Holaha (Livestock Market)", "cityId": 2, "presumedValue": 65000, "lower": 40000, "higher": 90000, "band": "B", "midpointValue": 65000 },
+    { "id": 3, "name": "KM4", "cityId": 3, "presumedValue": 150000, "lower": 100000, "higher": 200000, "band": "D", "midpointValue": 150000 },
+    { "id": 4, "name": "Zoobe", "cityId": 3, "presumedValue": 120000, "lower": 80000, "higher": 160000, "band": "C", "midpointValue": 120000 },
+    { "id": 5, "name": "Bakaaraha", "cityId": 4, "presumedValue": 200000, "lower": 150000, "higher": 300000, "band": "E", "midpointValue": 225000 },
+    { "id": 6, "name": "Bakaara Market Area", "cityId": 4, "presumedValue": 180000, "lower": 120000, "higher": 250000, "band": "D", "midpointValue": 185000 },
+    { "id": 7, "name": "Liido Beach Area", "cityId": 6, "presumedValue": 250000, "lower": 180000, "higher": 350000, "band": "E", "midpointValue": 265000 },
+    { "id": 8, "name": "Jazeera Beach", "cityId": 3, "presumedValue": 180000, "lower": 120000, "higher": 250000, "band": "D", "midpointValue": 185000 },
+    { "id": 9, "name": "Warta Nabadda", "cityId": 2, "presumedValue": 50000, "lower": 30000, "higher": 70000, "band": "B", "midpointValue": 50000 },
+    { "id": 10, "name": "Howlwadaag Center", "cityId": 2, "presumedValue": 95000, "lower": 60000, "higher": 130000, "band": "C", "midpointValue": 95000 }
+  ]
+}

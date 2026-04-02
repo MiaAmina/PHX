@@ -1,0 +1,65 @@
+{
+  "businessTypes": [
+    { "id": 1, "type": "Retail Shop / Dukaan" },
+    { "id": 2, "type": "Restaurant / Makhaayad" },
+    { "id": 3, "type": "Hotel / Hudheel" },
+    { "id": 4, "type": "Construction Company" },
+    { "id": 5, "type": "Transportation / Gaadiidka" },
+    { "id": 6, "type": "Telecommunications" },
+    { "id": 7, "type": "Money Transfer / Xawaaladda" },
+    { "id": 8, "type": "Import/Export" },
+    { "id": 9, "type": "Manufacturing / Warshadaha" },
+    { "id": 10, "type": "Agriculture / Beeraha" },
+    { "id": 11, "type": "Livestock Trading" },
+    { "id": 12, "type": "Health Services / Caafimaadka" },
+    { "id": 13, "type": "Education Services / Waxbarashada" },
+    { "id": 14, "type": "Real Estate" },
+    { "id": 15, "type": "Fuel Station" }
+  ],
+  "businessClassTypes": [
+    { "id": 1, "businessClass": "Micro Enterprise", "description": "1-4 employees, annual revenue under $10,000" },
+    { "id": 2, "businessClass": "Small Enterprise", "description": "5-19 employees, annual revenue $10,000-$100,000" },
+    { "id": 3, "businessClass": "Medium Enterprise", "description": "20-99 employees, annual revenue $100,000-$1,000,000" },
+    { "id": 4, "businessClass": "Large Enterprise", "description": "100+ employees, annual revenue over $1,000,000" }
+  ],
+  "ownerTypes": [
+    { "id": 1, "type": "Sole Proprietor / Milkiile Keliya" },
+    { "id": 2, "type": "Partnership / Iskaashato" },
+    { "id": 3, "type": "Corporation / Shirkad" },
+    { "id": 4, "type": "Cooperative / Iskaashi" },
+    { "id": 5, "type": "Government Entity" },
+    { "id": 6, "type": "NGO / Non-Profit" },
+    { "id": 7, "type": "Family Business / Ganacsi Qoys" }
+  ],
+  "titleTypes": [
+    { "id": 1, "title": "Owner / Milkiile" },
+    { "id": 2, "title": "Manager / Maamule" },
+    { "id": 3, "title": "Director / Agaasime" },
+    { "id": 4, "title": "Partner / Iskaashato" },
+    { "id": 5, "title": "Secretary" },
+    { "id": 6, "title": "Accountant / Xisaabiye" }
+  ],
+  "financialInstitutionTypes": [
+    { "id": 1, "type": "Commercial Bank" },
+    { "id": 2, "type": "Microfinance Institution" },
+    { "id": 3, "type": "Money Transfer (Hawala)" },
+    { "id": 4, "type": "Mobile Money Operator" },
+    { "id": 5, "type": "Islamic Bank" },
+    { "id": 6, "type": "Central Bank" },
+    { "id": 7, "type": "Credit Union / SACCO" }
+  ],
+  "financialInstitutions": [
+    { "id": 1, "name": "Central Bank of Somalia (CBS)", "typeId": 6, "photo": null },
+    { "id": 2, "name": "Dahabshiil Bank International", "typeId": 1, "photo": null },
+    { "id": 3, "name": "Salaam Somali Bank", "typeId": 1, "photo": null },
+    { "id": 4, "name": "Premier Bank", "typeId": 1, "photo": null },
+    { "id": 5, "name": "IBS Bank", "typeId": 1, "photo": null },
+    { "id": 6, "name": "Amal Bank", "typeId": 5, "photo": null },
+    { "id": 7, "name": "Hormuud Telecom (EVC Plus)", "typeId": 4, "photo": null },
+    { "id": 8, "name": "Somtel (Zaad)", "typeId": 4, "photo": null },
+    { "id": 9, "name": "Golis Telecom (Sahal)", "typeId": 4, "photo": null },
+    { "id": 10, "name": "Dahabshiil Hawala", "typeId": 3, "photo": null },
+    { "id": 11, "name": "Amal Express", "typeId": 3, "photo": null },
+    { "id": 12, "name": "Taaj Hawala", "typeId": 3, "photo": null }
+  ]
+}

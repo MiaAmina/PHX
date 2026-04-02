@@ -1,0 +1,49 @@
+{
+  "notaryTypes": [
+    { "id": 1, "typename": "Public Notary / Saxiixe Guud" },
+    { "id": 2, "typename": "Private Notary" },
+    { "id": 3, "typename": "Government Notary" },
+    { "id": 4, "typename": "Court Notary" }
+  ],
+  "programTypes": [
+    { "id": 1, "name": "Law / Sharciga" },
+    { "id": 2, "name": "Sharia Law / Fiqhiga" },
+    { "id": 3, "name": "Civil Law" },
+    { "id": 4, "name": "Commercial Law" },
+    { "id": 5, "name": "Land Law" }
+  ],
+  "qualificationTypes": [
+    { "id": 1, "type": "Law Degree (LLB)" },
+    { "id": 2, "type": "Sharia Studies" },
+    { "id": 3, "type": "Bar Certification" },
+    { "id": 4, "type": "Notary License" },
+    { "id": 5, "type": "Legal Diploma" }
+  ],
+  "salesTaxFees": [
+    { "id": 1, "fee": 2.5 },
+    { "id": 2, "fee": 5.0 },
+    { "id": 3, "fee": 7.5 },
+    { "id": 4, "fee": 10.0 }
+  ],
+  "serviceTypes": [
+    { "id": 1, "name": "Property Sale / Iibka Hantida" },
+    { "id": 2, "name": "Property Transfer / Wareejinta" },
+    { "id": 3, "name": "Power of Attorney / Wakiilnimo" },
+    { "id": 4, "name": "Affidavit / Dhaarta" },
+    { "id": 5, "name": "Lease Agreement / Heshiiska Kirada" },
+    { "id": 6, "name": "Will / Dardaaran" },
+    { "id": 7, "name": "Vehicle Sale" },
+    { "id": 8, "name": "Vehicle Transfer" },
+    { "id": 9, "name": "Business Registration" },
+    { "id": 10, "name": "Contract Attestation" },
+    { "id": 11, "name": "Inheritance Division / Qaybinta Dhaxalka" },
+    { "id": 12, "name": "Dispute Resolution Certificate" }
+  ],
+  "notaryCertificateFormCategories": [
+    { "id": 1, "name": "Land Title Certificate", "description": "Certificate for land ownership verification" },
+    { "id": 2, "name": "Property Transfer Certificate", "description": "Certificate for completed property transfer" },
+    { "id": 3, "name": "General Attestation", "description": "General purpose attestation certificate" },
+    { "id": 4, "name": "Vehicle Transfer Certificate", "description": "Certificate for vehicle ownership transfer" },
+    { "id": 5, "name": "Power of Attorney Certificate", "description": "Certificate granting power of attorney" }
+  ]
+}

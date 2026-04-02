@@ -1,0 +1,394 @@
+{
+  "parcels": [
+    {
+      "id": 1,
+      "srcId": "MOG-HOD-001",
+      "propertyRegistrationNumber": "PRN-2025-00001",
+      "registrationDate": "2025-06-15",
+      "ownerId": 1,
+      "enumerator": {
+        "organization": "Benadir Survey Dept",
+        "name": "Ahmed Mohamed Ali",
+        "id": "SUR-001",
+        "phone": "+252-61-3334455",
+        "email": "ahmed.survey@benadir.gov.so"
+      },
+      "gps": {
+        "latitude": 2.0469,
+        "longitude": 45.3182,
+        "locationPrecision": "High (GPS Device)"
+      },
+      "location": {
+        "districtId": 1,
+        "cityId": 2,
+        "neighborhoodId": 1,
+        "zoneId": 1,
+        "geographicZoneId": 1,
+        "townshipId": null,
+        "areaName": "Taleex, Hodan"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "45",
+        "streetName": "Maka Al Mukarama Road",
+        "postalCode": "",
+        "locationDescription": "200m east of KM4 Junction, north side of road"
+      },
+      "boundaries": {
+        "eastBari": "Mohamed Ali property wall",
+        "westGalbeed": "Maka Al Mukarama Road",
+        "northWaqooyi": "Commercial building (Dahabshiil office)",
+        "southKoonfur": "Vacant plot"
+      },
+      "landDimensions": {
+        "width": 20, "widthUnitId": 5,
+        "length": 30, "lengthUnitId": 5,
+        "wallHeight": 3, "wallHeightUnitId": 5,
+        "area": 600, "areaUnitId": 1,
+        "areaInHectare": 0.06, "hectareUnitId": 2
+      },
+      "buildingDimensions": {
+        "height": 9, "width": 18, "length": 28,
+        "baseArea": 504, "totalArea": 1512,
+        "totalFloorArea": 1512,
+        "standardFloorHeight": 3, "standardFloorHeightUnitId": 5,
+        "capacity": 50
+      },
+      "classification": {
+        "landUseTypeId": 1,
+        "parcelTypeId": 1,
+        "parcelUseTypeId": 1,
+        "ownershipTypeId": 1,
+        "occupationTypeId": 1,
+        "propertyCategoryTypeId": 1,
+        "numberOfFloorsId": 3,
+        "standardFloorHeightRangeTypeId": 2
+      },
+      "valuation": {
+        "valuationMethodTypeId": 5,
+        "marketValue": 120000,
+        "presumedValue": 95000,
+        "squareMeterValue": 158.33,
+        "bandCategory": "C"
+      },
+      "tax": {
+        "taxableValue": 95000,
+        "tax": 2375,
+        "taxStatus": "Paid"
+      },
+      "recordOfNotes": "Three-story residential building in good condition. Owner-occupied ground floor, upper floors rented. Located on main commercial road."
+    },
+    {
+      "id": 2,
+      "srcId": "MOG-HW-001",
+      "propertyRegistrationNumber": "PRN-2025-00002",
+      "registrationDate": "2025-07-01",
+      "ownerId": 2,
+      "enumerator": {
+        "organization": "Benadir Survey Dept",
+        "name": "Ahmed Mohamed Ali",
+        "id": "SUR-001",
+        "phone": "+252-61-3334455",
+        "email": "ahmed.survey@benadir.gov.so"
+      },
+      "gps": {
+        "latitude": 2.0333,
+        "longitude": 45.3500,
+        "locationPrecision": "High (GPS Device)"
+      },
+      "location": {
+        "districtId": 3,
+        "cityId": 4,
+        "neighborhoodId": 5,
+        "zoneId": 1,
+        "geographicZoneId": 1,
+        "townshipId": null,
+        "areaName": "Bakaaraha, Hamar Weyne"
+      },
+      "address": {
+        "flatNumber": "3B",
+        "streetNumber": "12",
+        "streetName": "Via Roma",
+        "postalCode": "",
+        "locationDescription": "Old town district, near the old Italian cathedral"
+      },
+      "boundaries": {
+        "eastBari": "Via Roma road",
+        "westGalbeed": "Jama Mosque compound wall",
+        "northWaqooyi": "Ali Abdi shop building",
+        "southKoonfur": "Hamar Weyne market street"
+      },
+      "landDimensions": {
+        "width": 12, "widthUnitId": 5,
+        "length": 15, "lengthUnitId": 5,
+        "wallHeight": 4, "wallHeightUnitId": 5,
+        "area": 180, "areaUnitId": 1,
+        "areaInHectare": 0.018, "hectareUnitId": 2
+      },
+      "buildingDimensions": {
+        "height": 8, "width": 11, "length": 14,
+        "baseArea": 154, "totalArea": 308,
+        "totalFloorArea": 308,
+        "standardFloorHeight": 4, "standardFloorHeightUnitId": 5,
+        "capacity": 15
+      },
+      "classification": {
+        "landUseTypeId": 2,
+        "parcelTypeId": 2,
+        "parcelUseTypeId": 8,
+        "ownershipTypeId": 1,
+        "occupationTypeId": 1,
+        "propertyCategoryTypeId": 1,
+        "numberOfFloorsId": 2,
+        "standardFloorHeightRangeTypeId": 3
+      },
+      "valuation": {
+        "valuationMethodTypeId": 1,
+        "marketValue": 250000,
+        "presumedValue": 200000,
+        "squareMeterValue": 1111.11,
+        "bandCategory": "E"
+      },
+      "tax": {
+        "taxableValue": 200000,
+        "tax": 5000,
+        "taxStatus": "Pending"
+      },
+      "recordOfNotes": "Historic two-story commercial building in Hamar Weyne old town. Ground floor: textile shop. Upper floor: office space. Italian colonial era construction, partially renovated."
+    },
+    {
+      "id": 3,
+      "srcId": "MOG-WAD-001",
+      "propertyRegistrationNumber": "PRN-2025-00003",
+      "registrationDate": "2025-08-20",
+      "ownerId": 3,
+      "enumerator": {
+        "organization": "Benadir Survey Dept",
+        "name": "Amina Yusuf Ibrahim",
+        "id": "SUR-003",
+        "phone": "+252-61-6667788",
+        "email": "amina.survey@benadir.gov.so"
+      },
+      "gps": {
+        "latitude": 2.0372,
+        "longitude": 45.3045,
+        "locationPrecision": "Medium (Mobile Phone)"
+      },
+      "location": {
+        "districtId": 2,
+        "cityId": 3,
+        "neighborhoodId": 3,
+        "zoneId": 2,
+        "geographicZoneId": 2,
+        "townshipId": null,
+        "areaName": "KM4, Wadajir"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "78",
+        "streetName": "Wadada Taliska (Airport Road)",
+        "postalCode": "",
+        "locationDescription": "Near Aden Abdulle International Airport, south side of Airport Road"
+      },
+      "boundaries": {
+        "eastBari": "Airport perimeter fence",
+        "westGalbeed": "Residential compound",
+        "northWaqooyi": "Wadada Taliska (Airport Road)",
+        "southKoonfur": "Agricultural land"
+      },
+      "landDimensions": {
+        "width": 50, "widthUnitId": 5,
+        "length": 80, "lengthUnitId": 5,
+        "wallHeight": 2.5, "wallHeightUnitId": 5,
+        "area": 4000, "areaUnitId": 1,
+        "areaInHectare": 0.4, "hectareUnitId": 2
+      },
+      "buildingDimensions": {
+        "height": 6, "width": 30, "length": 40,
+        "baseArea": 1200, "totalArea": 2400,
+        "totalFloorArea": 2400,
+        "standardFloorHeight": 3, "standardFloorHeightUnitId": 5,
+        "capacity": 100
+      },
+      "classification": {
+        "landUseTypeId": 2,
+        "parcelTypeId": 7,
+        "parcelUseTypeId": 8,
+        "ownershipTypeId": 1,
+        "occupationTypeId": 1,
+        "propertyCategoryTypeId": 1,
+        "numberOfFloorsId": 2,
+        "standardFloorHeightRangeTypeId": 1
+      },
+      "valuation": {
+        "valuationMethodTypeId": 1,
+        "marketValue": 450000,
+        "presumedValue": 380000,
+        "squareMeterValue": 95.00,
+        "bandCategory": "D"
+      },
+      "tax": {
+        "taxableValue": 380000,
+        "tax": 9500,
+        "taxStatus": "Overdue"
+      },
+      "recordOfNotes": "Large mixed-use compound near airport. Ground floor: warehouse and offices. Upper floor: residential quarters. Large open yard suitable for parking or storage. Tax overdue since 2024."
+    },
+    {
+      "id": 4,
+      "srcId": "GAR-CTR-001",
+      "propertyRegistrationNumber": "PRN-PL-2025-00001",
+      "registrationDate": "2025-09-05",
+      "ownerId": 4,
+      "enumerator": {
+        "organization": "Puntland Land Authority",
+        "name": "Ismail Hersi Adan",
+        "id": "SUR-PL-001",
+        "phone": "+252-90-1112233",
+        "email": "ismail.hersi@puntland.gov.so"
+      },
+      "gps": {
+        "latitude": 8.4054,
+        "longitude": 48.4906,
+        "locationPrecision": "High (GPS Device)"
+      },
+      "location": {
+        "districtId": 18,
+        "cityId": 8,
+        "neighborhoodId": null,
+        "zoneId": null,
+        "geographicZoneId": 4,
+        "townshipId": null,
+        "areaName": "Garoowe Town Center"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "22",
+        "streetName": "Main Road",
+        "postalCode": "",
+        "locationDescription": "Garoowe town center, next to Puntland State House"
+      },
+      "boundaries": {
+        "eastBari": "Main Road",
+        "westGalbeed": "Residential compound (Warsame family)",
+        "northWaqooyi": "Government building",
+        "southKoonfur": "Open land"
+      },
+      "landDimensions": {
+        "width": 25, "widthUnitId": 5,
+        "length": 35, "lengthUnitId": 5,
+        "wallHeight": 2, "wallHeightUnitId": 5,
+        "area": 875, "areaUnitId": 1,
+        "areaInHectare": 0.0875, "hectareUnitId": 2
+      },
+      "buildingDimensions": {
+        "height": 3, "width": 20, "length": 30,
+        "baseArea": 600, "totalArea": 600,
+        "totalFloorArea": 600,
+        "standardFloorHeight": 3, "standardFloorHeightUnitId": 5,
+        "capacity": 20
+      },
+      "classification": {
+        "landUseTypeId": 1,
+        "parcelTypeId": 1,
+        "parcelUseTypeId": 1,
+        "ownershipTypeId": 1,
+        "occupationTypeId": 1,
+        "propertyCategoryTypeId": 2,
+        "numberOfFloorsId": 1,
+        "standardFloorHeightRangeTypeId": 2
+      },
+      "valuation": {
+        "valuationMethodTypeId": 5,
+        "marketValue": 45000,
+        "presumedValue": 35000,
+        "squareMeterValue": 40.00,
+        "bandCategory": "B"
+      },
+      "tax": {
+        "taxableValue": 35000,
+        "tax": 875,
+        "taxStatus": "Paid"
+      },
+      "recordOfNotes": "Single-story semi-permanent residential building in Garoowe center. Recently constructed. Compound wall partially built."
+    },
+    {
+      "id": 5,
+      "srcId": "MOG-DAY-001",
+      "propertyRegistrationNumber": "PRN-2025-00005",
+      "registrationDate": "2025-10-12",
+      "ownerId": 5,
+      "enumerator": {
+        "organization": "Benadir Survey Dept",
+        "name": "Amina Yusuf Ibrahim",
+        "id": "SUR-003",
+        "phone": "+252-61-6667788",
+        "email": "amina.survey@benadir.gov.so"
+      },
+      "gps": {
+        "latitude": 2.0588,
+        "longitude": 45.2834,
+        "locationPrecision": "Low (Estimated)"
+      },
+      "location": {
+        "districtId": 9,
+        "cityId": 1,
+        "neighborhoodId": null,
+        "zoneId": 3,
+        "geographicZoneId": 3,
+        "townshipId": null,
+        "areaName": "Dayniile IDP Area"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "",
+        "streetName": "Camp Zone 4",
+        "postalCode": "",
+        "locationDescription": "IDP settlement area, western Mogadishu outskirts"
+      },
+      "boundaries": {
+        "eastBari": "Communal water point",
+        "westGalbeed": "Open scrubland",
+        "northWaqooyi": "Adjacent IDP plot",
+        "southKoonfur": "Dirt access road"
+      },
+      "landDimensions": {
+        "width": 8, "widthUnitId": 5,
+        "length": 10, "lengthUnitId": 5,
+        "wallHeight": 0, "wallHeightUnitId": 5,
+        "area": 80, "areaUnitId": 1,
+        "areaInHectare": 0.008, "hectareUnitId": 2
+      },
+      "buildingDimensions": {
+        "height": 2.5, "width": 6, "length": 8,
+        "baseArea": 48, "totalArea": 48,
+        "totalFloorArea": 48,
+        "standardFloorHeight": 2.5, "standardFloorHeightUnitId": 5,
+        "capacity": 6
+      },
+      "classification": {
+        "landUseTypeId": 1,
+        "parcelTypeId": 1,
+        "parcelUseTypeId": 1,
+        "ownershipTypeId": 6,
+        "occupationTypeId": 4,
+        "propertyCategoryTypeId": 3,
+        "numberOfFloorsId": 1,
+        "standardFloorHeightRangeTypeId": 5
+      },
+      "valuation": {
+        "valuationMethodTypeId": 4,
+        "marketValue": 2000,
+        "presumedValue": 1500,
+        "squareMeterValue": 18.75,
+        "bandCategory": "A"
+      },
+      "tax": {
+        "taxableValue": 0,
+        "tax": 0,
+        "taxStatus": "Exempt (IDP)"
+      },
+      "recordOfNotes": "IDP temporary shelter in Dayniile settlement. Makeshift structure with corrugated iron roof. Owner displaced from Baydhaba region since 2019. Tax exempt under IDP provisions. Land tenure: customary/informal."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin",
+      "description": "Full system administrator — all modules, all actions"
+    },
+    {
+      "id": 2,
+      "name": "registrar",
+      "description": "Land registrar — can create/edit owners, parcels, deeds, and notary services"
+    },
+    {
+      "id": 3,
+      "name": "tax_collector",
+      "description": "Tax assessment and collection — can view parcels, manage payments and fees"
+    },
+    {
+      "id": 4,
+      "name": "data_entry",
+      "description": "Field data entry — can create/edit owners and parcels, cannot delete"
+    },
+    {
+      "id": 5,
+      "name": "viewer",
+      "description": "Read-only access to all public modules"
+    },
+    {
+      "id": 6,
+      "name": "notary",
+      "description": "Notary services — can manage notary registrations, accounts, and transactions"
+    },
+    {
+      "id": 7,
+      "name": "surveyor",
+      "description": "Land surveyor — can update GPS coordinates, boundaries, and dimensions on parcels"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "givenName": "System",
+      "familyName": "Administrator",
+      "email": "admin@lims.gov.so",
+      "jobTitle": "System Administrator",
+      "roleIds": [1],
+      "active": true,
+      "organization": "LIMSAPPLICATIONADMINSTRATION"
+    },
+    {
+      "id": 2,
+      "username": "muse.registrar",
+      "password": "registrar123",
+      "givenName": "Muse",
+      "familyName": "Abdi",
+      "email": "muse.abdi@benadir.gov.so",
+      "jobTitle": "Senior Registrar",
+      "roleIds": [2],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    },
+    {
+      "id": 3,
+      "username": "halima.tax",
+      "password": "tax123",
+      "givenName": "Halima",
+      "familyName": "Omar",
+      "email": "halima.omar@benadir.gov.so",
+      "jobTitle": "Tax Collection Officer",
+      "roleIds": [3],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    },
+    {
+      "id": 4,
+      "username": "abdi.entry",
+      "password": "entry123",
+      "givenName": "Abdi",
+      "familyName": "Hassan",
+      "email": "abdi.hassan@benadir.gov.so",
+      "jobTitle": "Field Data Entry Officer",
+      "roleIds": [4],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    },
+    {
+      "id": 5,
+      "username": "fatima.notary",
+      "password": "notary123",
+      "givenName": "Fatima",
+      "familyName": "Warsame",
+      "email": "fatima.warsame@notary.gov.so",
+      "jobTitle": "Notary Officer",
+      "roleIds": [6],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    },
+    {
+      "id": 6,
+      "username": "ahmed.surveyor",
+      "password": "survey123",
+      "givenName": "Ahmed",
+      "familyName": "Mohamed",
+      "email": "ahmed.mohamed@survey.gov.so",
+      "jobTitle": "Land Surveyor",
+      "roleIds": [7],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    },
+    {
+      "id": 7,
+      "username": "viewer.demo",
+      "password": "viewer123",
+      "givenName": "Demo",
+      "familyName": "Viewer",
+      "email": "demo@lims.gov.so",
+      "jobTitle": "Observer",
+      "roleIds": [5],
+      "active": true,
+      "organization": "Benadir Regional Administration"
+    }
+  ]
+}

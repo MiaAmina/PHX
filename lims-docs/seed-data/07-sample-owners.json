@@ -1,0 +1,204 @@
+{
+  "owners": [
+    {
+      "id": 1,
+      "registrar": {
+        "organization": "Benadir Regional Administration",
+        "fullName": "Muse Abdi Farah",
+        "registrarId": "REG-001",
+        "phone": "+252-61-1234567",
+        "email": "muse.abdi@benadir.gov.so"
+      },
+      "ownerInfo": {
+        "stateRegistrationNumber": "SRN-MOG-2025-0001",
+        "idDocumentTypeId": 1,
+        "idDocumentNumber": "NID-2024-00451",
+        "registrationDate": "2025-06-15",
+        "fullName": "Abdirahman Farah Hassan",
+        "firstName": "Abdirahman",
+        "middleName": "Farah",
+        "lastName": "Hassan",
+        "placeOfBirth": "Mogadishu",
+        "dateOfBirth": "1978-03-22",
+        "genderId": 1,
+        "phone": "+252-61-5551234",
+        "email": "abdirahman.hassan@email.so"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "45",
+        "streetName": "Maka Al Mukarama Road",
+        "districtId": 1,
+        "location": "Near KM4 Junction",
+        "cityId": 2,
+        "postalCode": ""
+      },
+      "legalWill": {
+        "contactFullName": "Amina Farah Hassan",
+        "contactPhone": "+252-61-5559876",
+        "contactEmail": "amina.hassan@email.so",
+        "relationship": "Wife / Xaas"
+      }
+    },
+    {
+      "id": 2,
+      "registrar": {
+        "organization": "Benadir Regional Administration",
+        "fullName": "Muse Abdi Farah",
+        "registrarId": "REG-001",
+        "phone": "+252-61-1234567",
+        "email": "muse.abdi@benadir.gov.so"
+      },
+      "ownerInfo": {
+        "stateRegistrationNumber": "SRN-MOG-2025-0002",
+        "idDocumentTypeId": 2,
+        "idDocumentNumber": "P-SOM-2023-78456",
+        "registrationDate": "2025-07-01",
+        "fullName": "Fadumo Ali Jama",
+        "firstName": "Fadumo",
+        "middleName": "Ali",
+        "lastName": "Jama",
+        "placeOfBirth": "Hargeisa",
+        "dateOfBirth": "1985-11-10",
+        "genderId": 2,
+        "phone": "+252-63-4447890",
+        "email": "fadumo.jama@email.so"
+      },
+      "address": {
+        "flatNumber": "3B",
+        "streetNumber": "12",
+        "streetName": "Via Roma",
+        "districtId": 3,
+        "location": "Hamar Weyne Old Town",
+        "cityId": 4,
+        "postalCode": ""
+      },
+      "legalWill": {
+        "contactFullName": "Ali Jama Abdi",
+        "contactPhone": "+252-63-4441111",
+        "contactEmail": "",
+        "relationship": "Father / Aabe"
+      }
+    },
+    {
+      "id": 3,
+      "registrar": {
+        "organization": "Benadir Regional Administration",
+        "fullName": "Halima Omar Isse",
+        "registrarId": "REG-003",
+        "phone": "+252-61-7778899",
+        "email": "halima.omar@benadir.gov.so"
+      },
+      "ownerInfo": {
+        "stateRegistrationNumber": "SRN-MOG-2025-0003",
+        "idDocumentTypeId": 1,
+        "idDocumentNumber": "NID-2024-00892",
+        "registrationDate": "2025-08-20",
+        "fullName": "Mohamed Yusuf Abdi",
+        "firstName": "Mohamed",
+        "middleName": "Yusuf",
+        "lastName": "Abdi",
+        "placeOfBirth": "Gaalkacyo",
+        "dateOfBirth": "1970-05-30",
+        "genderId": 1,
+        "phone": "+252-61-2223344",
+        "email": ""
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "78",
+        "streetName": "Wadada Taliska (Airport Road)",
+        "districtId": 2,
+        "location": "Wadajir, near Aden Abdulle Airport",
+        "cityId": 3,
+        "postalCode": ""
+      },
+      "legalWill": {
+        "contactFullName": "Yusuf Abdi Mohamed",
+        "contactPhone": "+252-61-2225566",
+        "contactEmail": "",
+        "relationship": "Son / Wiil"
+      }
+    },
+    {
+      "id": 4,
+      "registrar": {
+        "organization": "Puntland Land Authority",
+        "fullName": "Ismail Hersi Adan",
+        "registrarId": "REG-PL-001",
+        "phone": "+252-90-1112233",
+        "email": "ismail.hersi@puntland.gov.so"
+      },
+      "ownerInfo": {
+        "stateRegistrationNumber": "SRN-GAR-2025-0001",
+        "idDocumentTypeId": 1,
+        "idDocumentNumber": "NID-2024-11234",
+        "registrationDate": "2025-09-05",
+        "fullName": "Sahra Adan Warsame",
+        "firstName": "Sahra",
+        "middleName": "Adan",
+        "lastName": "Warsame",
+        "placeOfBirth": "Garoowe",
+        "dateOfBirth": "1990-08-14",
+        "genderId": 2,
+        "phone": "+252-90-5556677",
+        "email": "sahra.warsame@email.so"
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "22",
+        "streetName": "Main Road",
+        "districtId": 18,
+        "location": "Garoowe Town Center",
+        "cityId": 8,
+        "postalCode": ""
+      },
+      "legalWill": {
+        "contactFullName": "Adan Warsame Ali",
+        "contactPhone": "+252-90-5558899",
+        "contactEmail": "",
+        "relationship": "Father / Aabe"
+      }
+    },
+    {
+      "id": 5,
+      "registrar": {
+        "organization": "Benadir Regional Administration",
+        "fullName": "Muse Abdi Farah",
+        "registrarId": "REG-001",
+        "phone": "+252-61-1234567",
+        "email": "muse.abdi@benadir.gov.so"
+      },
+      "ownerInfo": {
+        "stateRegistrationNumber": "SRN-MOG-2025-0004",
+        "idDocumentTypeId": 4,
+        "idDocumentNumber": "UNHCR-SOM-2019-45678",
+        "registrationDate": "2025-10-12",
+        "fullName": "Nimo Ibrahim Osman",
+        "firstName": "Nimo",
+        "middleName": "Ibrahim",
+        "lastName": "Osman",
+        "placeOfBirth": "Baydhaba (Baidoa)",
+        "dateOfBirth": "1992-02-28",
+        "genderId": 2,
+        "phone": "+252-61-8889900",
+        "email": ""
+      },
+      "address": {
+        "flatNumber": "",
+        "streetNumber": "",
+        "streetName": "Camp Zone 4",
+        "districtId": 9,
+        "location": "Dayniile IDP Settlement",
+        "cityId": 1,
+        "postalCode": ""
+      },
+      "legalWill": {
+        "contactFullName": "Ibrahim Osman Nur",
+        "contactPhone": "+252-61-8881122",
+        "contactEmail": "",
+        "relationship": "Father / Aabe"
+      }
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\setstretch{1.25}
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\setmainfont[
+  Path=/home/runner/.local/share/fonts/,
+  BoldFont=Inter-Bold.ttf,
+  ItalicFont=Inter-Italic.ttf,
+  BoldItalicFont=Inter-BoldItalic.ttf
+]{Inter-Regular.ttf}
+\setmonofont{DejaVu Sans Mono}
+
+\definecolor{headerblue}{RGB}{44,62,80}
+\definecolor{headergray}{RGB}{230,230,230}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=headerblue,
+  urlcolor=headerblue
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ===== COVER PAGE =====
+\vspace*{3cm}
+
+\begin{center}
+
+{\Huge \textbf{PHX EXCHANGE}}
+
+\vspace{0.5cm}
+
+{\Large Investor Pitch Deck}
+
+\vspace{0.4cm}
+
+{\large The Digital Liquidity Layer for Saudi Hospitality}
+
+\vspace{2cm}
+
+\includegraphics[width=3cm]{phx-logo.png}
+
+\vspace{2cm}
+
+{\large \textbf{PREPARED FOR:}}
+
+\vspace{0.3cm}
+
+{\normalsize Strategic Partners \& Investors}
+
+\vspace{1.5cm}
+
+{\large \textbf{SUBMITTED BY:}}
+
+\vspace{0.3cm}
+
+{\normalsize Amina Yussuf Mohamed}
+
+\vspace{0.1cm}
+
+{\normalsize Founder \& Lead Architect}
+
+\vspace{1.5cm}
+
+{\large \textbf{DATE:}}
+
+\vspace{0.3cm}
+
+{\normalsize March 2026 | Ramadan 1447H}
+
+\end{center}
+
+\newpage
+\pagestyle{plain}
+
+% ===== SLIDE 1 =====
+\section*{Slide 1: Title \& Vision}
+
+{\Large \textbf{PHX Exchange}}
+
+\vspace{0.2cm}
+
+{\large \textit{The Digital Liquidity Layer for Saudi Hospitality}}
+
+\vspace{0.5cm}
+
+Digitizing the \$100B wholesale room-block market for Hajj \& Umrah.
+
+\vspace{0.3cm}
+
+Tagline: ``Where Hotels Auction. Brokers Trade. Agents Book.''
+
+\vspace{0.3cm}
+
+\textit{Visual: High-resolution rendering of a modern hotel in Makkah with the PHX logo overlay}
+
+\newpage
+
+% ===== SLIDE 2 =====
+\section*{Slide 2: The Problem --- The ``WhatsApp Chaos''}
+
+Every year, millions of hotel room-nights in Makkah and Madinah are traded through fragmented, manual channels. The result is a broken supply chain.
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{10.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Pain Point} & \textbf{Impact} \\
+\hline
+\textbf{Opaque Pricing} & Wholesale inventory is negotiated via WhatsApp groups and phone calls with zero price transparency \\
+\hline
+\textbf{Trust Deficit} & No secure escrow mechanism for massive B2B room-block payments --- disputes are resolved by reputation alone \\
+\hline
+\textbf{Inventory Deadlock} & Large blocks sit unsold with major brokers while thousands of small travel agents lack access to quality inventory \\
+\hline
+\textbf{Compliance Gap} & Manual VAT invoicing, no audit trail, and zero integration with ZATCA or Ministry of Hajj systems \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{quote}
+``An estimated 60--70\% of seasonal room inventory in Makkah and Madinah is traded with zero digital oversight --- no escrow, no audit trail, no recourse.''
+\end{quote}
+
+\newpage
+
+% ===== SLIDE 3 =====
+\section*{Slide 3: The Solution --- The ``Live Pit''}
+
+PHX Exchange is a real-time B2B2C marketplace that connects the three pillars of the Hajj \& Umrah accommodation supply chain:
+
+\vspace{0.5cm}
+
+\subsection*{For Hotels: ``Maximize Your Yield''}
+\begin{itemize}
+\tightlist
+\item Auction room blocks to a verified broker network
+\item Real-time competitive bidding drives prices to true market value
+\item Anti-sniping protection ensures fair auction dynamics
+\item Ministry BRN assignment for full regulatory compliance
+\end{itemize}
+
+\subsection*{For Brokers: ``Trade with Speed''}
+\begin{itemize}
+\tightlist
+\item Access a transparent secondary market for room inventory
+\item Win auctions, apply markup pricing, and distribute to agent networks
+\item Private and direct offer channels for whitelisted agents
+\item 7-day inventory discipline --- use it or lose it
+\end{itemize}
+
+\subsection*{For Agents: ``Book with Certainty''}
+\begin{itemize}
+\tightlist
+\item Browse a verified marketplace of available rooms
+\item Atomic booking with instant escrow protection
+\item Register pilgrims, generate PDF vouchers with QR codes
+\item ZATCA-compliant tax invoices downloadable on demand
+\end{itemize}
+
+\textit{Visual: Screenshot of the Live Auction page showing real-time bidding, countdown timers, and verified hotel badges.}
+
+\newpage
+
+% ===== SLIDE 4 =====
+\section*{Slide 4: Market Opportunity --- Vision 2030}
+
+Saudi Arabia's Vision 2030 is transforming the Kingdom into a global tourism powerhouse. PHX Exchange is positioned at the center of this transformation.
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{9cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Metric} & \textbf{Value} \\
+\hline
+\textbf{Vision 2030 Target} & 150 million annual tourists \\
+\hline
+\textbf{Current Hajj Pilgrims} & \textasciitilde{}2.5 million annually (growing) \\
+\hline
+\textbf{Current Umrah Visitors} & \textasciitilde{}27.5 million annually (2024) \\
+\hline
+\textbf{Saudi PropTech Market} & Projected \$2.5B by 2028 \\
+\hline
+\textbf{Hospitality Wholesale TAM} & Estimated \$8--12B annually in Makkah/Madinah alone \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{The Gap:} Most Saudi PropTech startups focus on residential real estate. PHX Exchange is the first institutional-grade Hospitality Exchange purpose-built for the Hajj \& Umrah supply chain.
+
+\vspace{0.3cm}
+
+\textbf{The Timing:} The Saudi government is actively digitizing the Hajj ecosystem (Nusuk platform, e-visa, smart city infrastructure). PHX Exchange aligns perfectly with this national priority.
+
+\newpage
+
+% ===== SLIDE 5 =====
+\section*{Slide 5: The ``Underlying Magic'' --- Fintech Engine}
+
+PHX Exchange is not just a marketplace --- it is a financial operating system for hospitality trading.
+
+\subsection*{The 80/20 Escrow Split}
+
+\begin{verbatim}
+Agent Books Rooms (SAR 10,000)
+         |
+    +---------+---------+
+    |                   |
+  20% Instant         80% Held in Escrow
+  (SAR 2,000)         (SAR 8,000)
+  Broker Commission    Until Hotel Check-in
+    |                   |
+    v                   v
+  Broker Wallet       Hotel Check-in Verified
+                        |
+                   +---------+---------+
+                   |                   |
+                 95% to Hotel        5% Platform Fee
+                 (SAR 7,600)         (SAR 400)
+\end{verbatim}
+
+\subsection*{Core Financial Infrastructure}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{9.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Feature} & \textbf{Description} \\
+\hline
+\textbf{Double-Entry Wallet Ledger} & Audit-ready tracking of every Halala across all user wallets \\
+\hline
+\textbf{ZATCA Phase 2 Compliance} & TLV-encoded QR codes on PDF tax invoices with seller/buyer VAT profiles \\
+\hline
+\textbf{Escrow Dispute Resolution} & Agent-initiated disputes freeze escrow; Admin resolves with full audit trail \\
+\hline
+\textbf{Safety Logic} & 7-day inventory clawback, zero-bid expiry, verification gates, license expiry suspension \\
+\hline
+\textbf{Multi-Currency Display} & SAR as primary with display conversion to USD, EUR, GBP, EGP, IDR, PKR \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ===== SLIDE 6 =====
+\section*{Slide 6: Business Model --- The Revenue}
+
+PHX Exchange generates revenue through a high-volume, low-overhead transaction fee model.
+
+\subsection*{Primary Revenue: Platform Fee}
+\begin{itemize}
+\tightlist
+\item \textbf{5\% fee} on every escrow settlement (the 80\% hotel payout)
+\item Collected automatically at check-in or 48-hour auto-release
+\item Example: On a SAR 10,000 booking, PHX collects SAR 400
+\end{itemize}
+
+\subsection*{Future Revenue Streams}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{7.5cm}|>{\raggedright\arraybackslash}p{2.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Stream} & \textbf{Description} & \textbf{Timeline} \\
+\hline
+\textbf{Premium Analytics} & Hotel dashboards tracking winning bid trends, demand forecasting, yield optimization & Q1 2027 \\
+\hline
+\textbf{SaaS Tiers} & Tiered subscription for brokers (more inventory slots, priority access, advanced offer tools) & Q2 2027 \\
+\hline
+\textbf{Payment Processing} & Gateway integration margin on real fund movement (post-SAMA sandbox) & Q4 2027 \\
+\hline
+\textbf{Data Licensing} & Anonymized market intelligence for hotel groups and tourism authorities & 2028 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Unit Economics}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{9cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Average Booking Value & SAR 5,000 -- 50,000 \\
+\hline
+Platform Fee per Booking & SAR 200 -- 2,000 \\
+\hline
+Marginal Cost per Transaction & Near zero (digital infrastructure) \\
+\hline
+Gross Margin Target & 85\%+ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ===== SLIDE 7 =====
+\section*{Slide 7: Regulatory Compliance --- The ``SAMA'' Slide}
+
+PHX Exchange is built from the ground up for Saudi regulatory compliance.
+
+\subsection*{Current Status: Virtual Ledger (MVP Complete)}
+\begin{itemize}
+\tightlist
+\item Full financial logic implemented as an internal ledger
+\item No real money movement --- all transactions are tracked digitally
+\item ZATCA-compliant tax invoice generation with TLV QR codes
+\item Ministry BRN integration for room block assignments
+\end{itemize}
+
+\subsection*{Regulatory Roadmap --- From Virtual Ledger to Real Money}
+
+The platform is architected so that each future integration plugs into an existing system --- no rebuilds required.
+
+\vspace{0.3cm}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.2cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{5.8cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Milestone} & \textbf{Timeline} & \textbf{Description} & \textbf{What We Have Today} \\
+\hline
+\textbf{SAMA Regulatory Sandbox} & Q3 2026 & Entry into SAMA's fintech sandbox to enable real escrow processing with SAR fund movement & Virtual ledger with full 80/20 escrow logic, payout requests, admin approval --- ready to connect a payment gateway \\
+\hline
+\textbf{Nafath Integration} & Q4 2026 & National SSO for biometric business identity verification & Admin-managed verification queue with document upload, CR/VAT validation, and license expiry auto-suspension \\
+\hline
+\textbf{Nusuk Masar API} & Q1 2027 & Direct API link to Ministry of Hajj for real-time BRN code validation & Hotels assign BRN codes to auctions; agents generate BRN-linked PDF vouchers --- API link automates validation \\
+\hline
+\textbf{MISA Licensing} & Q1 2027 & Ministry of Investment licensing for B2B marketplace operations & Platform operating as technology demo \\
+\hline
+\textbf{Full SAMA License} & Q4 2027 & Graduate from sandbox to full payment processing license & Sandbox track record provides evidence for full license application \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ===== SLIDE 8 =====
+\section*{Slide 8: Competitive Landscape}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{4cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Feature} & \textbf{WhatsApp / Phone} & \textbf{Legacy OTAs} & \textbf{PHX Exchange} \\
+\hline
+Real-time Auctions & No & No & Yes \\
+\hline
+Escrow Protection & No & Partial & Full 80/20 Split \\
+\hline
+ZATCA Tax Invoices & No & Partial & Automated PDF with TLV QR \\
+\hline
+Ministry BRN Integration & No & No & Yes \\
+\hline
+Secondary Market & Informal & No & Built-in Marketplace \\
+\hline
+Verification \& Compliance & None & Basic & Multi-document with Admin review \\
+\hline
+Dispute Resolution & Reputation-based & Manual & Automated with escrow freeze \\
+\hline
+Audit Trail & None & Limited & Complete wallet ledger \\
+\hline
+Multi-language & No & Partial & Full RTL support (AR/UR/FA/EN) \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{Our Moat}
+\begin{enumerate}
+\tightlist
+\item \textbf{Saudi-Specific Deep Integration} --- BRN assignment, ZATCA TLV invoicing, CR/VAT verification already built; Nafath SSO and Nusuk Masar API are plug-in upgrades, not rebuilds
+\item \textbf{Purpose-Built for Hajj/Umrah} --- Not a generic hotel platform adapted for pilgrimage; every feature serves the Makkah/Madinah supply chain
+\item \textbf{Financial Infrastructure} --- The escrow engine, double-entry ledger, and dispute system took thousands of engineering hours --- this is the hardest part to replicate
+\item \textbf{Network Effects} --- Hotels attract brokers, brokers attract agents, agents bring demand; each new participant increases platform value for all others
+\item \textbf{Regulatory Head Start} --- Full compliance logic is live today; competitors would need to build ZATCA invoicing, verification workflows, and escrow from scratch
+\end{enumerate}
+
+\newpage
+
+% ===== SLIDE 9 =====
+\section*{Slide 9: Traction \& Technical Roadmap}
+
+\subsection*{What We Have Built --- Platform Core (Complete)}
+
+All core platform logic has been engineered, tested, and is fully operational:
+
+\vspace{0.3cm}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{8.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Component} & \textbf{Status} & \textbf{Detail} \\
+\hline
+Auction Engine & Built & Real-time bidding with anti-sniping, WebSocket updates \\
+\hline
+Escrow System & Built & 80/20 split, freeze/unfreeze, auto-release, dispute resolution \\
+\hline
+Wallet Ledger & Built & 6 transaction types, payout requests, admin approval \\
+\hline
+Tax Invoicing & Built & ZATCA TLV QR codes, PDF generation, seller/buyer profiles \\
+\hline
+Verification & Built & Multi-document compliance, admin review queue, license expiry \\
+\hline
+Safety Logic & Built & Zero-bid expiry, 7-day clawback, verification gates \\
+\hline
+Internationalization & Built & English, Arabic, Urdu, Farsi --- full RTL support \\
+\hline
+4-Role Platform & Built & Admin, Hotel, Broker, Agent with role-specific dashboards \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{What Comes Next --- With Funding}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Phase} & \textbf{Timeline} & \textbf{Focus} & \textbf{Key Deliverable} \\
+\hline
+\textbf{Phase 1: Platform Core} & Complete & Marketplace logic, escrow, compliance, and safety systems & Virtual ledger with full audit trail \\
+\hline
+\textbf{Phase 2: Regulatory Sandbox} & Q3--Q4 2026 & SAMA sandbox entry, Nafath biometric identity, payment gateway & Real SAR fund movement through escrow \\
+\hline
+\textbf{Phase 3: Live Market} & 2027 & Full payment processing, Nusuk Masar API, premium analytics & First live auctions with real hotel inventory \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ===== SLIDE 10 =====
+\section*{Slide 10: The Team}
+
+\textbf{Amina Yussuf Mohamed} --- Founder \& Lead Architect
+
+\vspace{0.3cm}
+
+Senior Software Engineer and Architect specializing in high-concurrency enterprise systems. Background in Telecommunications and Cybersecurity, with the technical pedigree required to meet the National Cybersecurity Authority (NCA) standards. Designed PHX from the ground up on a Zero Trust security model.
+
+\vspace{0.5cm}
+
+Key capabilities:
+\begin{itemize}
+\tightlist
+\item Deep understanding of the Hajj/Umrah accommodation supply chain
+\item Fintech and payment systems expertise
+\item Saudi regulatory and compliance knowledge
+\item Technical execution (full platform built and functional)
+\end{itemize}
+
+\newpage
+
+% ===== SLIDE 11 =====
+\section*{Slide 11: The Ask \& Use of Funds}
+
+\subsection*{Series Seed}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{8.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Allocation} & \textbf{Percentage} & \textbf{Purpose} \\
+\hline
+\textbf{Engineering} & 40\% & SAMA payment gateway (HyperPay/Moyasar), Nafath biometric SSO, Nusuk Masar BRN API, mobile apps, load testing for Hajj-season traffic \\
+\hline
+\textbf{Operations} & 30\% & SAMA sandbox application, MISA licensing, REGA alignment, legal counsel, regulatory compliance team \\
+\hline
+\textbf{Marketing} & 30\% & Onboarding top 50 Saudi hotel groups, broker acquisition in Makkah/Madinah, agent network growth across GCC and South Asia \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{What Funding Unlocks}
+
+The platform is 100\% built. Investment capital unlocks three critical integrations that move PHX from demo to live marketplace:
+
+\vspace{0.3cm}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{6cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Integration} & \textbf{What It Does} & \textbf{Why It Needs Funding} \\
+\hline
+\textbf{SAMA Payment Gateway} & Enables real SAR fund movement through the existing escrow engine & Gateway licensing fees, sandbox application costs, compliance audit, payment processor integration \\
+\hline
+\textbf{Nafath Biometric SSO} & Replaces manual admin verification with government-backed identity checks & National Information Center API agreement, integration engineering, KYC/AML compliance layer \\
+\hline
+\textbf{Nusuk Masar BRN API} & Automates Ministry of Hajj room allocation validation in real time & Ministry partnership agreement, API integration, real-time sync infrastructure \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{Key Milestones with This Funding}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{2cm}|>{\raggedright\arraybackslash}p{7.5cm}|}
+\hline
+\rowcolor{headergray}
+\textbf{Milestone} & \textbf{Timeline} & \textbf{Success Metric} \\
+\hline
+SAMA Sandbox Approval & Q3 2026 & Regulatory green light for real escrow transactions \\
+\hline
+Nafath SSO Live & Q4 2026 & Automated identity verification replacing manual document review \\
+\hline
+First 10 Hotel Partners & Q4 2026 & Live auctions with real inventory and real SAR payments \\
+\hline
+Nusuk Masar API Connected & Q1 2027 & Real-time BRN validation on every auction listing \\
+\hline
+First 100 Broker Accounts & Q1 2027 & Active bidding and secondary market trading \\
+\hline
+First 1,000 Agent Bookings & Q2 2027 & Revenue generation and unit economics validation \\
+\hline
+Series A Readiness & Q4 2027 & Proven product-market fit with audited financials \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+% ===== CONTACT =====
+\section*{Contact}
+
+\vspace{2cm}
+
+\begin{center}
+
+{\Large \textbf{PHX Exchange}}
+
+\vspace{1cm}
+
+\textit{Amina Yussuf Mohamed}\\
+\textit{Founder \& Lead Architect}
+
+\vspace{2cm}
+
+{\large ``Where Hotels Auction. Brokers Trade. Agents Book.''}
+
+\vspace{1cm}
+
+\textit{March 2026}
+
+\end{center}
+
+\end{document}

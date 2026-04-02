@@ -1,0 +1,38 @@
+Project Proposal: iKoor
+Sub-title: A Digital "Bell" for Somalia’s Biodiversity & Environmental Resilience
+
+Date: March 2026
+
+Location: Federal Republic of Somalia
+
+1. Executive Summary
+Somalia is home to globally unique biodiversity that is currently undocumented in digital global databases. iKoor is a mobile-first, citizen-science platform designed to bridge this gap. By empowering local communities, students, and pastoralists to report wildlife and plant sightings, iKoor will create the first real-time, high-resolution map of Somalia’s natural heritage. This data will directly support the National Biodiversity Strategy and the 2026 Voluntary National Review (VNR) for the UN Sustainable Development Goals (SDGs).
+
+2. The Problem Statement
+Despite having the longest coastline in mainland Africa and unique endemic species (like the Somali Wild Ass and Frankincense trees), Somalia faces:
+
+Data Scarcity: A lack of localized, up-to-date biodiversity data for policy-making.
+
+Security Risks: Poaching threats to endangered species due to unmanaged location data.
+
+Climate Vulnerability: Rapid habitat loss from droughts and deforestation (charcoal trade) that goes unmonitored.
+
+3. The Solution: iKoor
+iKoor (named after the traditional Somali camel bell) serves as a "digital signal" for the environment.
+
+Mobile Observation: Users capture photos/audio of species with GPS timestamps.
+
+Offline First: Designed for the Somali interior; data saves locally and uploads when 4G/Wi-Fi is available.
+
+AI & Community ID: Uses computer vision and a network of Somali biologists to verify sightings.
+
+"Poacher-Proof" Privacy: Automatic "Geoprivacy" for endangered species, obscuring coordinates from the public while sharing them with verified conservationists.
+
+4. Strategic Objectives
+Digital Mapping: Document 50,000+ biodiversity observations across all 18 regions within 24 months.
+
+Community Engagement: Train 500 "Environment Ambassadors" in universities (Mogadishu, Hargeisa, Garowe).
+
+Policy Support: Provide the MoECC with a dashboard to monitor "Life on Land" (SDG 15) and "Life Below Water" (SDG 14).
+
+Language Inclusion: Full Somali-language interface to ensure pastoralist participation.

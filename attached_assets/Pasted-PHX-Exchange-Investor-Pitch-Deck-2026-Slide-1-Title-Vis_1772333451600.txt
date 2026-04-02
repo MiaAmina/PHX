@@ -1,0 +1,80 @@
+PHX Exchange: Investor Pitch Deck (2026)
+Slide 1: Title & Vision
+Visual: High-resolution rendering of a modern hotel in Makkah or NEOM with the PHX logo.
+
+Text: PHX Exchange: The Digital Liquidity Layer for Saudi Hospitality.
+
+Tagline: Digitizing the $100B wholesale room-block market.
+
+Slide 2: The Problem (The "WhatsApp" Chaos)
+Pain Points: * Wholesale inventory is currently traded via opaque, manual WhatsApp groups.
+
+Trust Deficit: No secure escrow for massive B2B room-block payments.
+
+Inventory Dead-lock: Large blocks sit unsold while small agents lack access.
+
+Stat: "X% of seasonal room inventory in Makkah/Madinah is traded with zero digital oversight."
+
+Slide 3: The Solution (The "Live Pit")
+Visual: Screenshot of the Broker Live Auction page from your Replit app.
+
+Value Prop: * Hotels: Maximize yield through real-time competitive bidding.
+
+Brokers: Access a transparent "secondary market" for inventory.
+
+Agents: Book with certainty using the Ministry-compliant BRN system.
+
+Slide 4: Market Opportunity (Vision 2030)
+The Goal: 150 Million annual tourists by 2030.
+
+TAM (Total Addressable Market): The projected $2.5B Saudi PropTech market.
+
+The Gap: Most Saudi PropTech is residential; PHX is the first institutional-grade Hospitality Exchange.
+
+Slide 5: The "Underlying Magic" (Fintech Engine)
+Visual: A simple diagram showing the 80/20 Escrow Split.
+
+The Tech:
+
+Double-Entry Ledger: Audit-ready tracking of every Halala.
+
+ZATCA Phase 2: Automated, encrypted tax invoicing built-in.
+
+Safety Logic: 7-Day Inventory Clawback & Zero-Bid Expiry.
+
+Slide 6: Business Model (The Revenue)
+Transaction Fee: PHX collects a 5% Platform Fee on the 80% escrow settlement.
+
+SaaS Tiers: Premium analytics for Hotels to track "Winning Bid" trends.
+
+Scalability: High-volume, low-overhead digital infrastructure.
+
+Slide 7: Regulatory Compliance (The "SAMA" Slide)
+Status: Currently operating with a Virtual Ledger (MVP complete).
+
+Roadmap: * Q3 2026: Entry into SAMA Regulatory Sandbox.
+
+Identity: Integration with Nafath (National SSO) for broker verification.
+
+Compliance: Alignment with REGA (Real Estate General Authority) standards.
+
+Slide 8: Competitive Landscape
+The "Old Way": WhatsApp, Phone Calls, Legacy Travel Portals (OTA).
+
+The "PHX Way": Real-time auctions, verified escrow, and secondary market liquidity.
+
+Moat: Our deep integration with Saudi-specific requirements (BRN, VAT, Nusuk ID).
+
+Slide 9: Traction & Technical Roadmap
+Visual: The roadmap we discussed (Phase 1: Ledger, Phase 2: Sandbox, Phase 3: Live).
+
+Milestones: "Backend logic 100% complete in Replit; 7-Day Clawback and Verification Gates active."
+
+Slide 10: The Ask & Use of Funds
+The Ask: $[Your Amount] for Series Seed.
+
+Allocation: * 40% Engineering (SAMA Gateway & Nafath Integration).
+
+30% Operations (Obtaining full MISA & SAMA licensing).
+
+30% Marketing (Onboarding the top 50 Saudi Hotel Groups).

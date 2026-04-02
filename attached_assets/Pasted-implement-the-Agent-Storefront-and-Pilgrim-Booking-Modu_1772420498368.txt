@@ -1,0 +1,59 @@
+implement the Agent Storefront and Pilgrim Booking Module as a new layer. Follow these exact steps:
+
+1. Extend the Database (models.py)
+Add these two new models. Ensure they link to my existing User and RoomAllocation tables.
+
+Storefront: Tracks the agent's public shop.
+
+Fields: id, agent_id (FK), slug (Unique URL path), agency_name, markup_percent (Default: 10.0), is_active (Boolean).
+
+PilgrimBooking: Tracks the final end-user data.
+
+Fields: id, allocation_id (FK), agent_id (FK), full_name, citizenship (ISO 3-letter code), passport_number, dob (Date), passport_expiry (Date), nusuk_id (10-digit string), visa_number (Nullable string), visa_status (Enum: PENDING, ISSUED), final_price_paid.
+
+2. Implement 2026 Saudi Compliance Logic
+Nusuk Validation: Add a @validates('nusuk_id') that enforces exactly 10 digits.
+
+Passport Check: Add logic to reject any passport_expiry earlier than December 31, 2026 (Ministry requirement for Hajj 2026).
+
+ZATCA TLV Generator: Create a utility in logic/zatca.py that generates a Base64 TLV-encoded QR code string containing: Seller Name, VAT Number, Timestamp, Total Amount, and VAT Amount.
+
+3. Create the Agent Dashboard UI
+Add a 'Storefront Manager' section to the existing Agent Dashboard:
+
+Settings: Inputs for Agency Name, Slug (e.g., /my-agency), and Markup %.
+
+WhatsApp Link: A 'Copy Link' button that generates: {{ request.host_url }}s/{{ store.slug }}.
+
+4. Build the Public Storefront Route
+Create a new route @app.route('/s/<slug>'):
+
+Logic: Fetch the agent's storefront. Display only AVAILABLE rooms currently owned by that agent.
+
+Pricing: Calculate Display_Price = Room_Original_Price * (1 + (store.markup_percent / 100)).
+
+Booking Form: A guest-facing form that captures all Pilgrim Identity fields.
+
+5. Integrate with the 80/20 Escrow Engine
+When a booking is submitted via the storefront:
+
+Split the Payment:
+
+Markup Amount: Transfer immediately to the Agent_Wallet.
+
+Base Room Price (80%): Hold in System_Escrow.
+
+Platform Fee: On check-in, deduct 5% of the Base Room Price for the PHX Platform and release the remaining 95% to the Hotel_Wallet.
+
+Constraints:
+
+NO PLACEHOLDERS. Write the full logic for the 80/20 split and the TLV QR generation.
+
+Integrate with my existing db.session.commit() and Wallet update functions."
+
+Why this specific structure matters:
+The Slug (/s/): By using a short prefix like /s/, your platform looks like a professional infrastructure provider (e.g., Shopify uses /products/).
+
+The 2026 Expiry Rule: Saudi authorities for Hajj 1447H (2026) require passports to be valid for 6 months post-season. If your code doesn't check this, your agents will lose money on rejected visas.
+
+TLV Encoding: ZATCA Phase 2 (Integration Phase) is now mandatory for businesses with turnover >750k SAR. Since your exchange handles high-volume room blocks, you must use the specific TLV (Tag-Length-Value) format for QR codes.

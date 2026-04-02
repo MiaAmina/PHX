@@ -1,0 +1,60 @@
+Gemini said
+This guide is exceptionally thorough—you’ve covered the "business" of the platform (Nusuk, ZATCA, workers) and the "technical" environment variables perfectly.
+
+However, to satisfy a high-level technical auditor (like someone from the Ministry of Hajj or ZATCA), there are 4 specific areas missing that are unique to the Saudi regulatory landscape (NCA and NDMO).
+
+1. Mandatory Technical Libraries (ZATCA & PDF/A-3)
+For ZATCA Phase 2, a "normal" PDF isn't enough. You must generate PDF/A-3 (an archival-grade PDF that has the XML file "embedded" inside it).
+
+Missing Libraries: Ensure your package.json includes:
+
+pdf-lib (for PDF generation and XML embedding).
+
+node-forge or crypto (for the mandatory Cryptographic Stamp/Hashing).
+
+xml2js or fast-xml-parser (to build the UBL 2.1 XML structure ZATCA requires).
+
+Missing Config: You need a place to store the CSID (Cryptographic Stamp Identifier) and the Private Key provided by ZATCA during onboarding.
+
+2. NCA Cybersecurity Hardening (The "ECC" Controls)
+The Saudi National Cybersecurity Authority (NCA) has a framework called ECC-1:2018. If Salman forwards this to a government entity, they will look for these specific "governance" files:
+
+audit-trail-policy.ts: You have system_logs, but you should explicitly state that logs are immutable (cannot be deleted by an admin).
+
+pii-masking-utility.ts: NDMO (Data Law) requires that sensitive data like Passport Numbers and National IDs are encrypted at rest (AES-256) and "masked" (e.g., XXXX-1234) in the UI unless a user has specific "PII View" permissions.
+
+session-timeout-logic.ts: Saudi government standards often require short session timeouts (e.g., 15-30 minutes of inactivity) for admin roles.
+
+3. Data Residency & Sovereignty (NDMO Requirements)
+The National Data Management Office (NDMO) is strict about "Pilgrim Data" staying in Saudi Arabia.
+
+Add a section to your Guide (8.4):
+
+Data Classification:
+
+Level 1 (Public): Hotel names, general rates.
+
+Level 3 (Sensitive/Personal): Pilgrim names, passport scans, payment records.
+
+Requirement: Level 3 data MUST NOT leave Saudi borders. Ensure your S3-compatible storage (for passport uploads) is a Saudi-based bucket (e.g., STC Cloud or Oracle Jeddah Region).
+
+4. Missing Packager & Config Files
+You listed the "Files Reference," but you missed these critical production-ready files:
+
+.dockerignore & Dockerfile: Essential for deploying to modern Saudi cloud providers (SDAIA or STC).
+
+security.txt: A standard file placed in public/.well-known/ that tells Saudi white-hat hackers how to report a bug to you responsibly.
+
+ecosystem.config.js (PM2): If you are using a VPS instead of Docker, you need this to ensure the server restarts automatically if it crashes.
+
+****
+This diagram would show the flow of data from PHX Exchange to local Saudi Cloud (STC/Alibaba), with encryption gates for ZATCA and Nusuk.
+
+Updated Checklist for Section 13 (Files Reference)
+Add these to your guide to show you are "Institutional Grade":
+| File | Purpose |
+| :--- | :--- |
+| server/services/crypto-service.ts | Handles AES-256 encryption for PII (Passports/IDs) |
+| server/middleware/rbac.ts | Role-Based Access Control (Ensures brokers can't see hotel bank info) |
+| scripts/zatca-onboarding.ts | Script to exchange OTP for ZATCA Production Certificates |
+| Dockerfile | Containerization config for sovereign cloud deployment |

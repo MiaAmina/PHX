@@ -1,0 +1,105 @@
+// --- PHX CORE SCHEMA ---
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. User Management with RBAC
+enum UserRole {
+  ADMIN
+  HOTEL
+  BROKER
+  AGENT
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  password      String
+  role          UserRole
+  businessName  String
+  isVerified    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  // Relations
+  auctions      Auction[]     // For Hotels
+  wonBlocks     WonBlock[]    // For Brokers
+  bookings      Booking[]     // For Agents
+}
+
+// 2. The Auction Engine
+enum AuctionStatus {
+  ACTIVE
+  ENDED
+  CANCELLED
+}
+
+model Auction {
+  id            String        @id @default(uuid())
+  hotelId       String
+  hotel         User          @relation(fields: [hotelId], references: [id])
+  roomType      String        // e.g., Quad, Triple, Double
+  distance      Int           // Distance to Haram in meters
+  quantity      Int           // Number of rooms in this block
+  floorPrice    Decimal
+  endTime       DateTime
+  status        AuctionStatus @default(ACTIVE)
+  
+  bids          Bid[]
+  wonBlock      WonBlock?
+}
+
+model Bid {
+  id            String   @id @default(uuid())
+  auctionId     String
+  auction       Auction  @relation(fields: [auctionId], references: [id])
+  brokerId      String
+  amount        Decimal
+  createdAt     DateTime @default(now())
+}
+
+// 3. Broker Inventory & Markup
+model WonBlock {
+  id            String   @id @default(uuid())
+  auctionId     String   @unique
+  auction       Auction  @relation(fields: [auctionId], references: [id])
+  brokerId      String
+  broker        User     @relation(fields: [brokerId], references: [id])
+  
+  winningPrice  Decimal
+  markupAmount  Decimal  @default(0) // Fixed $ or % added by Broker
+  isListed      Boolean  @default(false) // If true, visible to Agents
+  
+  bookings      Booking[]
+}
+
+// 4. Agent Bookings & Pilgrims
+model Booking {
+  id            String   @id @default(uuid())
+  blockId       String
+  block         WonBlock @relation(fields: [blockId], references: [id])
+  agentId       String
+  agent         User     @relation(fields: [agentId], references: [id])
+  
+  totalPrice    Decimal
+  status        String   @default("CONFIRMED")
+  pilgrims      Pilgrim[]
+  createdAt     DateTime @default(now())
+}
+
+model Pilgrim {
+  id            String   @id @default(uuid())
+  bookingId     String
+  booking       Booking  @relation(fields: [bookingId], references: [id])
+  
+  fullName      String
+  passportNo    String
+  gender        String
+  visaStatus    String   @default("PENDING")
+  voucherUrl    String?
+}

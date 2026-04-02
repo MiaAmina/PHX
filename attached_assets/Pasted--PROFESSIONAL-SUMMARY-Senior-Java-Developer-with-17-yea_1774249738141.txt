@@ -1,0 +1,64 @@
+
+PROFESSIONAL SUMMARY
+Senior Java Developer with 17+ years of experience designing, developing, and maintaining secure, high-availability enterprise systems in regulated environments. Proven track record delivering Java and Spring Boot applications, leading complex data and system migrations, and building RESTful APIs integrating third-party platforms. Strong background in security, identity and access management (IAM), data integrity, and compliance-driven systems, with demonstrated ability to quickly adopt new technologies for fintech and high-transaction environments. Experienced mentor and technical lead with a strong business-alignment mindset.
+________________________________________
+CORE SKILLS
+Languages & Frameworks
+•	Java (Enterprise & Spring Boot), Spring Framework
+•	JPA / Hibernate, Spring Data JPA
+•	RESTful API Development
+•	JavaScript, Angular, HTML, CSS
+Architecture & Systems
+•	High-Availability & Scalable Systems
+•	Microservices & Distributed Systems (conceptual & applied)
+•	Secure Transaction Processing (enterprise-grade)
+•	Asynchronous Processing (architecture-level experience)
+Databases & Data
+•	Oracle, DB2, MySQL
+•	Advanced SQL & PL/SQL
+•	Data Migration, Validation & Integrity Controls
+•	Query Optimization & Performance Tuning
+Security & Compliance
+•	Secure Coding Practices
+•	Identity & Access Management (IAM)
+•	Data Protection & Audit Controls
+•	Compliance-Driven Environments (Fintech-Comparable)
+Cloud, DevOps & Tools
+•	Azure (enterprise deployments)
+•	Maven, Git (Bitbucket)
+•	IBM WebSphere, WebLogic, Tomcat, Glassfish
+•	CI/CD workflows (enterprise Git-based)
+Collaboration & Delivery
+•	Agile / Iterative Delivery
+•	Technical Documentation & Reporting
+•	Mentorship & Knowledge Transfer
+•	Stakeholder & Business Alignment
+________________________________________
+PROFESSIONAL EXPERIENCE
+Senior IT Specialist
+Social Security Administration (SSA) – Baltimore, Maryland
+Oct 2019 – Mar 2022
+•	Improved application security posture, as measured by reduced vulnerability findings, by conducting code reviews, enforcing secure coding standards, and collaborating with security teams in a compliance-driven environment.
+•	Delivered high-availability Java enterprise applications, as measured by successful UAT and production deployments, by designing, developing, and maintaining Spring and Struts 2 applications on IBM WebSphere.
+•	Enhanced system reliability and release readiness, as measured by lower defect rates, by developing test strategies and executing functional and performance testing prior to deployment.
+•	Aligned technical solutions with business and regulatory requirements, as measured by stakeholder approval, by translating functional needs into technical specifications and REST-enabled services.
+•	Strengthened team delivery and code quality, as measured by improved sprint outcomes, by mentoring junior developers, conducting peer reviews, and supporting Git-based CI workflows.
+•	Supported systems handling sensitive citizen data, as measured by audit success, by following access control, data protection, and governance practices comparable to fintech regulatory environments.
+Environment: Java, Spring, Struts 2, JPA, IBM WebSphere, DB2, RESTful APIs, Maven, Bitbucket, JavaScript, Angular, Security Reviews
+________________________________________
+Application Developer / Acting Project Manager
+University of California, Davis (UCDavis) – Davis, California
+Feb 2011 – Sep 2019
+•	Successfully migrated mission-critical databases with zero data loss, as measured by reconciliation and validation reports, by leading a 7-member team executing complex Oracle migrations using PL/SQL and SQL performance optimization.
+•	Enabled secure system integration with third-party cloud platforms, as measured by uninterrupted operations, by developing RESTful APIs connecting ServiceNow with external systems supporting billing and operational workflows.
+•	Improved data integrity and transaction accuracy, as measured by elimination of duplicate and corrupt records, by implementing validation logic, controlled data import/export processes, and audit-friendly migration procedures.
+•	Reduced operational risk and manual processing time, as measured by faster request turnaround, by automating approval, access-control, and asset workflows using enterprise Java systems.
+•	Strengthened identity and access management controls, as measured by successful enterprise rollouts, by collaborating with IAM teams on employee identity changes and secure system deployments.
+•	Improved system adoption and operational readiness, as measured by successful onboarding of 12+ users, by producing technical documentation, conducting training, and enforcing role-based access controls.
+•	Maintained scalable web applications with consistent uptime, as measured by service reliability, by supporting Java applications deployed across WebLogic, Tomcat, and Glassfish environments.
+•	Collaborated cross-functionally with DBAs, system administrators, and senior analysts, as measured by on-time delivery, by aligning system architecture with business, security, and compliance needs.
+Environment: Java, Spring Boot, Hibernate, RESTful APIs, Oracle RDBMS, PL/SQL, WebLogic, Tomcat, Glassfish, ServiceNow, Azure, Maven, XML, JavaScript, Security & IAM
+________________________________________
+EDUCATION
+Bachelor of Computer Science and Mathematics
+Carleton University – Ottawa, Canada

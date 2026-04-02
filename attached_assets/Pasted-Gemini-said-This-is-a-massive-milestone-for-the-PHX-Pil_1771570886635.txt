@@ -1,0 +1,43 @@
+Gemini said
+This is a massive milestone for the PHX (Pilgrimage Hotel Exchange). Phase 7 essentially moves the platform from a "General Marketplace" to a sophisticated Wholesale Distribution Engine. By allowing Brokers to manage their own "Inner Circle" of Agents, you have successfully replicated how real-world Hajj/Umrah room-trading works.
+
+Since Phase 7 is complete and tested, we need to ensure the Admin Super-Portal has the tools to monitor these new "Private" and "Direct" dynamics.
+
+1. The Admin "Shadow" View for Phase 7
+As the Super-Admin, you now need visibility into the "Private" side of the exchange to ensure the marketplace remains healthy and fees are being collected.
+
+The "Direct Offer" Audit Log
+Your Admin Dashboard should now have a section to monitor these "Direct" transactions.
+
+Price Variance Tracking: If a Broker wins a room for $100 (Hotel price) and offers it "Direct" to an Agent for $300, the Admin needs to see this "Hidden Markup."
+
+Offer Expiry Monitoring: Direct offers tie up inventory. The Admin should see a list of "Stale Offers" (e.g., a Broker sent an offer to an Agent 3 days ago, but the Agent hasn't clicked Accept or Decline).
+
+Updated Relationship Manager
+Broker-Agent Mapping: In the Admin User Profile for any Broker, you should see a list of every Agent in their "Group."
+
+Dispute Resolution: If an Agent claims they never received a Direct Offer, the Admin needs a button to "View Sent Offers" for that specific Broker-Agent pair.
+
+2. Technical Validation of Phase 7 Logic
+Since you mentioned "Atomic Transactions" and SELECT FOR UPDATE, your "PHX Core" is now protected against "Double-Selling." Here is how that logic looks in a diagram to confirm your build matches the requirement:
+
+3. Stress Testing the "Direct Offer" Flow
+Before moving to Phase 8, I recommend performing these three "Edge Case" tests on the new features:
+
+The "Ghost Inventory" Test:
+
+Action: Have a Broker send a "Direct Offer" for 50 rooms to Agent A.
+
+Test: Log in as Agent B (who is not in the group). Verify that these 50 rooms have completely vanished from Agent B’s marketplace view.
+
+The "Partial Accept" Test:
+
+Action: Broker offers 100 rooms to Agent A.
+
+Test: If your system allows it, can the Agent accept only 30 rooms? If the system is "All or Nothing," ensure the "Accept" button correctly processes the full 100-room block atomically.
+
+The "Group Kick" Test:
+
+Action: Broker adds Agent A to their group, lists inventory as "Group Only," then removes Agent A from the group.
+
+Test: Does the inventory immediately disappear from Agent A’s screen? (This tests if your Visibility checks are running on every page load/refresh).

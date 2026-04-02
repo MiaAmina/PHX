@@ -1,0 +1,323 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+\setstretch{1.25}
+
+\widowpenalty=10000
+\clubpenalty=10000
+
+\setmainfont[
+  Path=/home/runner/.local/share/fonts/,
+  BoldFont=Inter-Bold.ttf,
+  ItalicFont=Inter-Italic.ttf,
+  BoldItalicFont=Inter-BoldItalic.ttf
+]{Inter-Regular.ttf}
+
+\definecolor{headerblue}{RGB}{44,62,80}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=headerblue,
+  urlcolor=headerblue
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ===== COVER PAGE =====
+\vspace*{3cm}
+
+\begin{center}
+
+{\Huge \textbf{PHX EXCHANGE}}
+
+\vspace{0.5cm}
+
+{\Large Product Screenshots}
+
+\vspace{0.4cm}
+
+{\large Live Platform --- All Roles \& Features}
+
+\vspace{2cm}
+
+\includegraphics[width=3cm]{phx-logo.png}
+
+\vspace{2cm}
+
+{\large \textbf{PREPARED FOR:}}
+
+\vspace{0.3cm}
+
+{\normalsize Strategic Partners \& Investors}
+
+\vspace{1.5cm}
+
+{\large \textbf{SUBMITTED BY:}}
+
+\vspace{0.3cm}
+
+{\normalsize Amina Yussuf Mohamed}
+
+\vspace{0.1cm}
+
+{\normalsize Founder \& Lead Architect}
+
+\vspace{1.5cm}
+
+{\large \textbf{DATE:}}
+
+\vspace{0.3cm}
+
+{\normalsize March 2026 | Ramadan 1447H}
+
+\end{center}
+
+\newpage
+\pagestyle{plain}
+
+% ===== SCREENSHOT 1 =====
+\begin{center}
+{\Large \textbf{1. Secure Login Page}}
+
+\vspace{0.3cm}
+
+{\normalsize Role-based authentication for Hotels, Brokers, Agents, and Administrators.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/01_login_page.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 2 =====
+\begin{center}
+{\Large \textbf{2. Admin Dashboard --- Ministry Oversight View}}
+
+\vspace{0.3cm}
+
+{\normalsize Real-time platform metrics: total users, active auctions, bookings, and revenue.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/02_admin_dashboard.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 3 =====
+\begin{center}
+{\Large \textbf{3. Operator Registry --- User Management}}
+
+\vspace{0.3cm}
+
+{\normalsize All registered operators with verification status. Admin can verify, suspend, or impersonate any account.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/03_admin_users.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 4 =====
+\begin{center}
+{\Large \textbf{4. Financial Reports --- Market Intelligence}}
+
+\vspace{0.3cm}
+
+{\normalsize Platform-wide financial summary: GMV, VAT collected, escrow balances, and broker margins.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/04_admin_reports.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 5 =====
+\begin{center}
+{\Large \textbf{5. Escrow Ledger --- Financial Oversight}}
+
+\vspace{0.3cm}
+
+{\normalsize Every escrow hold, release, and dispute visible in one audit-ready ledger. 80/20 split tracked automatically.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/05_admin_escrow.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 6 =====
+\begin{center}
+{\Large \textbf{6. Live Auctions --- Real-Time Bidding}}
+
+\vspace{0.3cm}
+
+{\normalsize Hotels list room blocks, brokers bid in real-time via WebSocket. Anti-sniping protection ensures fair outcomes.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/06_auctions_overview.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 7 =====
+\begin{center}
+{\Large \textbf{7. Hotel Dashboard}}
+
+\vspace{0.3cm}
+
+{\normalsize Hotels manage their listings, view auction results, and track check-ins for escrow release.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/07_hotel_dashboard.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 8 =====
+\begin{center}
+{\Large \textbf{8. Hotel Auction Management}}
+
+\vspace{0.3cm}
+
+{\normalsize Hotels create room block auctions with room type, distance from Haram, floor price, and end time.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/08_hotel_auctions.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 9 =====
+\begin{center}
+{\Large \textbf{9. Broker Dashboard}}
+
+\vspace{0.3cm}
+
+{\normalsize Brokers monitor their won auctions, active inventory, and agent relationships.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/09_broker_dashboard.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 10 =====
+\begin{center}
+{\Large \textbf{10. Broker Inventory --- Markup \& Distribution}}
+
+\vspace{0.3cm}
+
+{\normalsize After winning an auction, brokers set their markup percentage and list rooms for agents. 7-day listing deadline enforced.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/10_broker_inventory.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 11 =====
+\begin{center}
+{\Large \textbf{11. Agent Dashboard}}
+
+\vspace{0.3cm}
+
+{\normalsize Agents view their bookings, pilgrim counts, storefront status, and financial summary.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/11_agent_dashboard.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 12 =====
+\begin{center}
+{\Large \textbf{12. Agent Marketplace --- Book Rooms}}
+
+\vspace{0.3cm}
+
+{\normalsize Agents browse available room blocks with hotel images, star ratings, distance from Haram, and VAT-inclusive pricing.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/12_agent_marketplace.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 13 =====
+\begin{center}
+{\Large \textbf{13. Agent Bookings --- Pilgrim Management}}
+
+\vspace{0.3cm}
+
+{\normalsize Agents manage bookings, add pilgrims (individually or CSV upload), and download voucher PDFs.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/13_agent_bookings.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 14 =====
+\begin{center}
+{\Large \textbf{14. Agent Storefront --- B2B2C Setup}}
+
+\vspace{0.3cm}
+
+{\normalsize Agents configure their own branded storefront for direct pilgrim bookings. Set commission rate and share a public URL.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/14_agent_storefront.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 15 =====
+\begin{center}
+{\Large \textbf{15. Wallet \& Transaction Ledger}}
+
+\vspace{0.3cm}
+
+{\normalsize Double-entry audit trail of every financial transaction: escrow holds, releases, payouts, and platform fees.}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/15_agent_transactions.png}
+\end{center}
+
+\newpage
+
+% ===== SCREENSHOT 16 =====
+\begin{center}
+{\Large \textbf{16. Public Pilgrim Storefront}}
+
+\vspace{0.3cm}
+
+{\normalsize The pilgrim-facing page. Pilgrims book directly through their agent's branded storefront --- individual, group, or CSV upload.\\Footer shows ``Secure Booking --- ZATCA Compliant --- Escrow Protected.''}
+
+\vspace{0.5cm}
+
+\includegraphics[width=\textwidth]{screenshots/16_public_storefront.png}
+\end{center}
+
+\end{document}

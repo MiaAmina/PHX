@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0a1628;
+  --navy-light: #111d33;
+  --navy-mid: #162440;
+  --gold: #d4a843;
+  --gold-light: #e8c46a;
+  --gold-dim: #b8922e;
+  --teal: #2dd4bf;
+  --teal-dim: #1a9e8f;
+  --white: #ffffff;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --green: #22c55e;
+  --red: #ef4444;
+  --blue: #3b82f6;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide {
+  width: 1280px;
+  height: 720px;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--navy-mid) 100%);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  padding: 48px 64px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gold-accent-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+}
+
+.corner-decoration {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0.06;
+}
+
+.corner-tl { top: 0; left: 0; border-top: 3px solid var(--gold); border-left: 3px solid var(--gold); }
+.corner-br { bottom: 0; right: 0; border-bottom: 3px solid var(--gold); border-right: 3px solid var(--gold); }
+
+.slide-number {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 11px;
+  color: var(--gray-500);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.brand-footer {
+  position: absolute;
+  bottom: 16px;
+  left: 40px;
+  font-size: 10px;
+  color: var(--gray-500);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-footer img, .logo-img {
+  height: 24px;
+  width: auto;
+  opacity: 0.7;
+}
+
+/* Title Slide */
+.title-slide .slide-bg {
+  background: radial-gradient(ellipse at 30% 50%, rgba(212,168,67,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(45,212,191,0.05) 0%, transparent 50%),
+              linear-gradient(135deg, var(--navy) 0%, #0d1f3c 100%);
+}
+
+.title-phx {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.title-main {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  max-width: 800px;
+  margin-bottom: 16px;
+}
+
+.title-main .gold { color: var(--gold); }
+
+.title-subtitle {
+  font-size: 20px;
+  color: var(--gray-300);
+  font-weight: 400;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.title-tagline {
+  font-size: 16px;
+  color: var(--gold-dim);
+  font-style: italic;
+  padding: 16px 24px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212,168,67,0.05);
+  max-width: 500px;
+}
+
+.title-meta {
+  position: absolute;
+  bottom: 48px;
+  left: 64px;
+  right: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title-meta-left {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.8;
+}
+
+.title-meta-right {
+  text-align: right;
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* Section Headers */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: var(--gray-400);
+  margin-bottom: 28px;
+  max-width: 750px;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin-bottom: 28px;
+}
+
+/* Cards & Boxes */
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-highlight {
+  border-color: rgba(212,168,67,0.25);
+  background: rgba(212,168,67,0.04);
+}
+
+.card-teal {
+  border-color: rgba(45,212,191,0.25);
+  background: rgba(45,212,191,0.04);
+}
+
+/* Grid Layouts */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+/* Stat Boxes */
+.stat-box {
+  text-align: center;
+  padding: 20px 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--gray-400);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-detail {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-top: 4px;
+}
+
+/* Pain Points */
+.pain-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.pain-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(239,68,68,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--red);
+}
+
+.pain-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.pain-desc {
+  font-size: 13px;
+  color: var(--gray-400);
+  line-height: 1.5;
+}
+
+/* Blockquote */
+.blockquote {
+  font-size: 15px;
+  color: var(--gold-light);
+  font-style: italic;
+  padding: 14px 20px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212,168,67,0.05);
+  border-radius: 0 8px 8px 0;
+  margin-top: auto;
+  line-height: 1.6;
+}
+
+/* Solution Cards */
+.solution-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 24px 20px;
+  height: 100%;
+}
+
+.solution-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.solution-card-subtitle {
+  font-size: 13px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.solution-bullet {
+  font-size: 13px;
+  color: var(--gray-300);
+  line-height: 1.5;
+  padding: 4px 0;
+  padding-left: 14px;
+  position: relative;
+}
+
+.solution-bullet::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* Table */
+.table-header {
+  display: grid;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gray-400);
+  border-bottom: 2px solid rgba(212,168,67,0.3);
+  margin-bottom: 2px;
+}
+
+.table-row {
+  display: grid;
+  padding: 9px 16px;
+  font-size: 14px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.table-row:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+.comp-grid { grid-template-columns: 2fr 1.2fr 1.2fr 1.5fr; }
+
+.badge-yes {
+  display: inline-block;
+  background: rgba(34,197,94,0.15);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.badge-no {
+  display: inline-block;
+  background: rgba(239,68,68,0.1);
+  color: #f87171;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.badge-partial {
+  display: inline-block;
+  background: rgba(251,191,36,0.12);
+  color: #fbbf24;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Escrow Flow */
+.escrow-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.escrow-step {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.escrow-step-active {
+  border-color: rgba(212,168,67,0.4);
+  background: rgba(212,168,67,0.08);
+}
+
+.escrow-step-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+
+.escrow-step-value {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.escrow-arrow {
+  font-size: 18px;
+  color: var(--gray-500);
+}
+
+/* Revenue */
+.revenue-box {
+  background: rgba(212,168,67,0.06);
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Phase timeline */
+.phase-card {
+  position: relative;
+  padding: 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+.phase-number {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+.phase-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.phase-desc {
+  font-size: 13px;
+  color: var(--gray-400);
+  line-height: 1.5;
+}
+
+/* Moat items */
+.moat-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.moat-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(212,168,67,0.15);
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.moat-text-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.moat-text-desc {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.4;
+}
+
+/* Status badges */
+.status-built {
+  display: inline-block;
+  background: rgba(34,197,94,0.15);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Allocation bar */
+.alloc-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.alloc-eng { background: var(--teal); }
+.alloc-ops { background: var(--gold); }
+.alloc-mkt { background: var(--blue); }
+
+/* Milestone timeline */
+.milestone-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.milestone-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.milestone-line {
+  width: 2px;
+  height: 20px;
+  background: rgba(212,168,67,0.2);
+  margin-left: 4px;
+}
+
+.milestone-date {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 70px;
+}
+
+.milestone-text {
+  font-size: 14px;
+  color: var(--gray-300);
+}
+
+.milestone-metric {
+  font-size: 10px;
+  color: var(--gray-500);
+  margin-left: auto;
+  text-align: right;
+  min-width: 180px;
+}
+
+/* Contact slide */
+.contact-slide .slide-bg {
+  background: radial-gradient(ellipse at 50% 50%, rgba(212,168,67,0.06) 0%, transparent 60%),
+              linear-gradient(135deg, var(--navy) 0%, #0d1f3c 100%);
+}
+
+.contact-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.contact-role {
+  font-size: 16px;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.contact-tagline {
+  font-size: 20px;
+  color: var(--gray-300);
+  font-style: italic;
+  padding: 20px 28px;
+  border: 1px solid rgba(212,168,67,0.2);
+  border-radius: 12px;
+  background: rgba(212,168,67,0.04);
+  max-width: 550px;
+}
+
+.flex-1 { flex: 1; }
+
+.feat-row {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 3fr;
+  padding: 7px 0;
+  font-size: 13px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.feat-name { font-weight: 600; }
+
+.reg-row {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 2.5fr 2.5fr;
+  padding: 8px 12px;
+  font-size: 13px;
+  align-items: start;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.fund-grid { grid-template-columns: 1.2fr 2fr 2fr; }
+
+.small-text { font-size: 13px; color: var(--gray-400); line-height: 1.5; }
+
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide title-slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="corner-decoration corner-tl"></div>
+  <div class="corner-decoration corner-br"></div>
+  <div class="slide-content" style="justify-content: center;">
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 32px;"><img src="data:image/png;base64,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" style="height: 48px; width: auto;"><div class="title-phx" style="margin-bottom: 0;">PHX EXCHANGE</div></div>
+    <div class="title-main">
+      The Digital <span class="gold">Liquidity Layer</span><br>for Saudi Hospitality
+    </div>
+    <div class="title-subtitle">
+      Digitizing the $100B wholesale room-block market for Hajj & Umrah.
+    </div>
+    <div class="title-tagline">
+      "Where Hotels Auction. Brokers Trade. Agents Book."
+    </div>
+    <div class="title-meta">
+      <div class="title-meta-left">
+        Prepared for Strategic Partners & Investors<br>
+        Submitted by Amina Yussuf Mohamed, Founder & Lead Architect
+      </div>
+      <div class="title-meta-right">
+        March 2026<br>
+        Ramadan 1447H
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: THE PROBLEM -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">THE PROBLEM</div>
+    <div class="section-title">The "WhatsApp Chaos"</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">Every year, millions of hotel room-nights in Makkah and Madinah are traded through fragmented, manual channels. The result is a broken supply chain.</div>
+
+    <div style="flex: 1;">
+      <div class="pain-row">
+        <div class="pain-icon">!</div>
+        <div>
+          <div class="pain-title">Opaque Pricing</div>
+          <div class="pain-desc">Wholesale inventory is negotiated via WhatsApp groups and phone calls with zero price transparency.</div>
+        </div>
+      </div>
+      <div class="pain-row">
+        <div class="pain-icon">!</div>
+        <div>
+          <div class="pain-title">Trust Deficit</div>
+          <div class="pain-desc">No secure escrow mechanism for massive B2B room-block payments — disputes are resolved by reputation alone.</div>
+        </div>
+      </div>
+      <div class="pain-row">
+        <div class="pain-icon">!</div>
+        <div>
+          <div class="pain-title">Inventory Deadlock</div>
+          <div class="pain-desc">Large blocks sit unsold with major brokers while thousands of small travel agents lack access to quality inventory.</div>
+        </div>
+      </div>
+      <div class="pain-row" style="border-bottom: none;">
+        <div class="pain-icon">!</div>
+        <div>
+          <div class="pain-title">Compliance Gap</div>
+          <div class="pain-desc">Manual VAT invoicing, no audit trail, and zero integration with ZATCA or Ministry of Hajj systems.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blockquote">
+      "An estimated 60-70% of seasonal room inventory in Makkah and Madinah is traded with zero digital oversight — no escrow, no audit trail, no recourse."
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAHRUExURRwlMC4zMLGVNtOuN7KVNi8zMB8nMGtgM8+rNtSvN8+qN01JMbWXNjA0MZF8NZ2GNTQ3MSMrMHhqNM6rN9CsN4V0NCYsMR0mMFtUMsCgNj8/MaiONa2SNURDMikuMdKtN9KuNywxMcilNntsM4h2NM+sN0tJMrSXNTc5MUhGMpuENbiaNlFMMl9XM7maNsmmN3JmNCAoMDk7MXZoM8elN1RPM72eNkJBMpF9NMGhNmBYMlVPMq2SNsGgNmZdM2ZcM8WkNz0+Mc+rN4d2NDg6MW1hM8OiNoNyNCQrMD4/McemNpmDNDM3MaKJNXprNIBwNDs8MbydNmRbM6WMNkxIMUBAMq6TNlVQM8qoN8SjNnFlM7OWNVlTMtOvN0dHMlxXM7GUNqmPNSsxMEREMa+TNbSYNoVzNB4nMJB8NLOXNsypNmNbM8uoN3tsNdGtN7ycNjo8MkxIMriaNYt5NCowMKaNNtSuN6CINjs9MZyENbKWNS8zMXdoNH1uNNCrN8SjN0lHMW5jM1dRM8CfNiIpMJJ9NUNDMaySNjU3Mod2NdGuN5WANa6TNZyFNSMqMFxVM8mnN2BYM0VEMr+fNsKiNkhHMm9jM3RmMzs9MDw9MP///81WlXcAAAABYktHRJqY32cSAAAACXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH6gMBBR0r0QzYRgAABwBJREFUeNrtnfd3VEUUx6PRhCeIJUQSFBNBccSCxEKwEZUAYm8IahQb2LEXVGyAvff/1pxsebP73t035d65M7P388tycjjvzPts+cA5LN+REUEQBEEQBEEQBEEQBEEQBEEQBEEQBIGYM84cHT3rbO5TsDE2vqpY5pzxMe6T8LB6TdFmzWruszBw7tpC47zzuc8TmAsunCh6WDd5EfeZArJ+arqoMD21nvtcodhwcVHLJRu5TxaESydnCoDZtZdxn46csfFN3fud2Nx6vPyK7o825Z7ELVf2fPK3fqGu2lr+9OpruM9IiJ6+lRttC1Dq2uuGIIl6+rZdv31EF6Dmbrgx9yTedHP1w64UoNSO+dHub9h5S3ZJ1NNX5k4XoNStt2WbRD19t2vPbq8Ape6Yrr5KMmBs1wLw/u4XoO6cvKv/cyJ9+tKnUxGg8ktiJX0NAjJLYk36GgXklMS69DULyCaJ9ekzEZBFEqH0mQlIPolw+kwFpJ3EAekzFpBwEgemz0JAoklsSJ+VgBST2JQ+OwHJJbE5fbYCkkqiSfrsBSSTRLP0uQhII4mG6XMSkEASjdPnKCDyJFqkz1lAzEm0SZ+7gGiTaJc+HwFRJtE2fX4Cokuiffp8BcSVRIf0eQuIKIlO6UMQEEkSHdOHIiCGJLqmD0cAexLd04clgDWJPunDE8CWRL/0YQrgSaJn+lAFMCTRO33IAgInESF96AJCJhEjffgCgiURJ30UAoIkESt9NALIk4iXPioBtElETB+ZAMIkoqaPUABREpHTRyqAIonY6aMVgJ5E/PRRC0BN4va7y/RRfKWFRoDavbine+yZSZ837d7udSY270O/fTIBSt2jfQljr8cB93cucu99BLdPKECpLfd3zr7f+4B0f80kFKAl0fuAdN/jIRWg5h5AEkB1+9QClBIBIkAEiAARIAJEgAgQASJABIgAESACRIAIEAEiQASIABEgAkSACBABIkAEiAARIAJEgAgQASJABHAKGNvVuv6DDw2ngPKf4D/8yBAK6N0XePSxIRNQ3ReY3zBEAmr3BfYs7h4WAY8D+wIHnhgKAYP2BbZuzF5A77fPWo/at70O4iYxPgHN+wKoSYxNgNm+AGIS4xJgvi+AlsSoBNjsCxx6EieJEQmw3Rd46umsBLjsC2AkMRIBjvsCCEmMQ4D7voB3EmMQ4Lcv4JlEfgH++wJeSWQXgLEv4JNEZgFY+wLuSWQVgLkv4JpERgHI+wKOSeQTgL8v4JRELgE0+wIOSeQRQLcvYJ1EFgGU+wK2SWQQQL0vYJfE4AJC7AvYJDGwgED7AhZJDCsg3L6AcRJDCgi7L2CYxHACwu8LGCUxmACOfQGTJAYSwLUv0JzEIAI49wWakhhAAPO+QEMS6QXw7wsMTCK1gDj2BQYkkVZAPPsCYBJJBcS0LwAlkVBAbPsC9UkkExDjvkBdEokERLovUJNEGgHx7gtUkkghIO59gb4k4guIf1+gJ4noAlLYF9CTiCwglX2BMomoAlLaF+gkEVFAYvsC7STiCUhvX2AliVgC0twXWE4ikoBk9wXmkQTgpo9WQG8SkQWkuC+AKCDRfQEsAQnvC6AISHlfwEfAUucaO59JTcCzhzpnX/I44OGuxaXnnk9JwAsvdp+74rDHAfe9pDXwyNFUBMy9PFue+xW/D6+pbeWlXn0tDQGLr6Oe+Y03y8sdeyt+AW+/U5535l2MV+1775dX/OBD1BriC/joY+3Pgcc/QTrnjmPlRdd9GrOAz06UJ/38C8STfrmK5MLIAr76muiJWubkqVmClxaqgNPflOlDfquu8O1x7A8XXAHffU/3Yd0GP4l4ApDTB4GdRCwB+OmDQE4ijgCa9EGgJhFFAFn6IBCTiCCAMn0QeEn0FkCdPgisJPoKCJA+CJwk+gkIlD4IjCT6CAiXPgiEJLoLCJs+CO8kOgsInj4IzyQ6CuBIH4RfEp0EcKUPwieJLgIY0wfhnkR7Aczpg3BNoq0A/vRBOCbRTkAc6YNwSqKVgGjSB+GQRAsBMaUPwj6JxgJiSx+EbRJNBUSYPgi7JJoJiDR9EDZJNBEQb/ogLJLYLCDu9EEYJ7FRQPTpgzBMYoOAFNIHYZbEgQJSSR+ESRIHCUgofRDNSYQFJJY+iKYkQgLSSx9EQxLrBaSZPoiBSawVkGz6IAYksUZAyumDgJNYEZB6+iCgJPYLyCB9EPVJ7BWQSfog6pKoC8gnfRA1SSwF5JU+iEoSuwKySx9EXxLbAnJMH8TJH7SX+o+thwNa+n76mfuE5OhJ7Cez9EH88mv97R/8jftkoTh6ZLZ6+xRfyYkXPYmZpw/i9z/02//zL+7zMPB39/87OPEP91l46CRxCNIH8e9CUSz8x30KQRAEQRAEQRCE4eN/EAKbsv1nmW4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDMtMDFUMDU6Mjk6MjUrMDA6MDDaGCKIAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTAzLTAxVDA1OjI5OjI1KzAwOjAwq0WaNAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wMy0wMVQwNToyOTo0MyswMDowMFnvh1YAAAAASUVORK5CYII=">PHX EXCHANGE</div>
+  <div class="slide-number">02 / 12</div>
+</div>
+
+<!-- SLIDE 3: THE SOLUTION -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">THE SOLUTION</div>
+    <div class="section-title">The "Live Pit"</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">PHX EXCHANGE is a real-time B2B2C marketplace connecting every stakeholder in the Hajj & Umrah accommodation supply chain.</div>
+
+    <div class="grid-2" style="flex: 1; gap: 16px;">
+      <div class="solution-card" style="border-top: 3px solid var(--gold); padding: 20px 16px;">
+        <div class="solution-card-title">For Hotels</div>
+        <div class="solution-card-subtitle">"Maximize Your Yield"</div>
+        <div class="solution-bullet">Auction room blocks to a verified broker network</div>
+        <div class="solution-bullet">Real-time bidding drives true market pricing</div>
+        <div class="solution-bullet">Anti-sniping protection ensures fair outcomes</div>
+        <div class="solution-bullet">Ministry BRN assignment for compliance</div>
+      </div>
+      <div class="solution-card" style="border-top: 3px solid var(--teal); padding: 20px 16px;">
+        <div class="solution-card-title">For Brokers</div>
+        <div class="solution-card-subtitle">"Trade with Speed"</div>
+        <div class="solution-bullet">Transparent secondary market for room inventory</div>
+        <div class="solution-bullet">Win auctions, set markup, distribute to agents</div>
+        <div class="solution-bullet">Private and direct offer channels</div>
+        <div class="solution-bullet">7-day inventory discipline — use it or lose it</div>
+      </div>
+      <div class="solution-card" style="border-top: 3px solid var(--blue); padding: 20px 16px;">
+        <div class="solution-card-title">For Agents</div>
+        <div class="solution-card-subtitle">"Book with Certainty"</div>
+        <div class="solution-bullet">Browse verified marketplace with hotel images</div>
+        <div class="solution-bullet">Atomic booking with instant escrow protection</div>
+        <div class="solution-bullet">Branded public storefront for pilgrim bookings</div>
+        <div class="solution-bullet">ZATCA-compliant tax invoices on demand</div>
+      </div>
+      <div class="solution-card" style="border-top: 3px solid var(--green); padding: 20px 16px;">
+        <div class="solution-card-title">For Pilgrims</div>
+        <div class="solution-card-subtitle">"Trust and Transparency"</div>
+        <div class="solution-bullet">Book through agent storefront — no middlemen</div>
+        <div class="solution-bullet">Track visa status with 3-step progress tracker</div>
+        <div class="solution-bullet">Download PDF voucher once visa is issued</div>
+        <div class="solution-bullet">Escrow guarantees accommodation is funded</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">03 / 12</div>
+</div>
+
+<!-- SLIDE 4: MINISTRY ADVANTAGES -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">MINISTRY ADVANTAGES</div>
+    <div class="section-title">The Headaches PHX Eliminates</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">Every pain point the Ministry of Hajj faces today in regulating accommodation trading — resolved by a single platform.</div>
+
+    <div class="grid-2" style="flex: 1; gap: 32px;">
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: #f87171; margin-bottom: 14px; letter-spacing: 2px;">TODAY'S HEADACHES</div>
+        <div class="pain-row">
+          <div class="pain-icon">!</div>
+          <div>
+            <div class="pain-title">No Visibility Into Market Pricing</div>
+            <div class="pain-desc">Room blocks trade via WhatsApp at unknown prices. The Ministry cannot detect price gouging or market manipulation.</div>
+          </div>
+        </div>
+        <div class="pain-row">
+          <div class="pain-icon">!</div>
+          <div>
+            <div class="pain-title">Pilgrim Money Is Unprotected</div>
+            <div class="pain-desc">Billions of riyals change hands with no escrow. When disputes arise, there is no mechanism for recovery or accountability.</div>
+          </div>
+        </div>
+        <div class="pain-row">
+          <div class="pain-icon">!</div>
+          <div>
+            <div class="pain-title">Unverified Operators</div>
+            <div class="pain-desc">Hotels, brokers, and agents operate without centralized verification. Bad actors re-enter the market each season.</div>
+          </div>
+        </div>
+        <div class="pain-row">
+          <div class="pain-icon">!</div>
+          <div>
+            <div class="pain-title">Zero Audit Trail</div>
+            <div class="pain-desc">No digital record of who sold what, to whom, at what price. ZATCA compliance is impossible to enforce at scale.</div>
+          </div>
+        </div>
+        <div class="pain-row" style="border-bottom: none;">
+          <div class="pain-icon">!</div>
+          <div>
+            <div class="pain-title">Pilgrim Data Is Fragmented</div>
+            <div class="pain-desc">Pilgrim accommodation assignments exist in spreadsheets and emails. No real-time sync with Nusuk or Ministry systems.</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size: 14px; font-weight: 700; color: var(--green); margin-bottom: 14px; letter-spacing: 2px;">WITH PHX EXCHANGE</div>
+        <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 14px;">&#10003;</div>
+          <div>
+            <div class="pain-title">Complete Price Transparency</div>
+            <div class="pain-desc" style="color: var(--gray-300);">Every auction, bid, and sale price is recorded. The Ministry sees true market value for the first time.</div>
+          </div>
+        </div>
+        <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 14px;">&#10003;</div>
+          <div>
+            <div class="pain-title">Escrow-Protected Payments</div>
+            <div class="pain-desc" style="color: var(--gray-300);">80% held until hotel check-in is confirmed. Pilgrim funds are guaranteed. Disputes freeze money automatically.</div>
+          </div>
+        </div>
+        <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 14px;">&#10003;</div>
+          <div>
+            <div class="pain-title">Verified Operator Registry</div>
+            <div class="pain-desc" style="color: var(--gray-300);">Every participant is verified before trading. Licenses are tracked. Bad actors are suspended instantly.</div>
+          </div>
+        </div>
+        <div style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 14px;">&#10003;</div>
+          <div>
+            <div class="pain-title">Full Financial Audit Trail</div>
+            <div class="pain-desc" style="color: var(--gray-300);">Double-entry ledger records every riyal. ZATCA-compliant invoices generated automatically with TLV QR codes.</div>
+          </div>
+        </div>
+        <div style="padding: 14px 0; display: flex; align-items: flex-start; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 14px;">&#10003;</div>
+          <div>
+            <div class="pain-title">Real-Time Pilgrim Pipeline</div>
+            <div class="pain-desc" style="color: var(--gray-300);">Pilgrim data flows from booking to Nusuk Masar sync to visa issuance — digitized, traceable, and Ministry-ready.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">04 / 12</div>
+</div>
+
+<!-- SLIDE 5: MARKET OPPORTUNITY -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">MARKET OPPORTUNITY</div>
+    <div class="section-title">Vision 2030 Alignment</div>
+    <div class="divider"></div>
+
+    <div class="grid-4" style="margin-bottom: 28px;">
+      <div class="stat-box">
+        <div class="stat-number">150M</div>
+        <div class="stat-label">Annual Tourists</div>
+        <div class="stat-detail">Vision 2030 Target</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">2.5M</div>
+        <div class="stat-label">Hajj Pilgrims</div>
+        <div class="stat-detail">Annually (growing)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">27.5M</div>
+        <div class="stat-label">Umrah Visitors</div>
+        <div class="stat-detail">Annually</div>
+      </div>
+      <div class="stat-box" style="border-color: rgba(212,168,67,0.3);">
+        <div class="stat-number">$12B</div>
+        <div class="stat-label">Wholesale TAM</div>
+        <div class="stat-detail">Makkah/Madinah hospitality</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="flex: 1;">
+      <div class="card">
+        <div style="font-size: 14px; font-weight: 700; margin-bottom: 10px; color: var(--gold);">The Gap</div>
+        <div class="small-text">
+          Most Saudi PropTech startups focus on residential real estate. PHX EXCHANGE is the first institutional-grade Hospitality Exchange purpose-built for the Hajj & Umrah supply chain.
+        </div>
+      </div>
+      <div class="card">
+        <div style="font-size: 14px; font-weight: 700; margin-bottom: 10px; color: var(--teal);">The Timing</div>
+        <div class="small-text">
+          The Saudi government is actively digitizing the Hajj ecosystem (Nusuk platform, e-visa, smart city infrastructure). PHX EXCHANGE aligns perfectly with this national priority.
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 16px;">
+      <span style="font-size: 15px; color: var(--gray-500);">Saudi PropTech market projected at $2.5B by 2028</span>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">05 / 12</div>
+</div>
+
+<!-- SLIDE 5: FINTECH ENGINE -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">FINTECH ENGINE</div>
+    <div class="section-title">The "Underlying Magic"</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">PHX EXCHANGE is not just a marketplace — it is a financial operating system for hospitality trading.</div>
+
+    <div class="grid-2" style="flex: 1;">
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 16px;">THE 80/20 ESCROW SPLIT</div>
+        <div class="escrow-flow" style="flex-wrap: wrap; justify-content: flex-start;">
+          <div class="escrow-step escrow-step-active" style="width: 100%; margin-bottom: 8px;">
+            <div class="escrow-step-label">Agent Books Rooms</div>
+            <div class="escrow-step-value">SAR 10,000</div>
+          </div>
+          <div style="display: flex; gap: 12px; width: 100%; margin-bottom: 8px;">
+            <div class="escrow-step" style="flex: 1;">
+              <div class="escrow-step-label">20% Instant</div>
+              <div class="escrow-step-value">SAR 2,000</div>
+              <div style="font-size: 14px; color: var(--gray-500); margin-top: 2px;">Broker Commission</div>
+            </div>
+            <div class="escrow-step escrow-step-active" style="flex: 1;">
+              <div class="escrow-step-label">80% Held in Escrow</div>
+              <div class="escrow-step-value">SAR 8,000</div>
+              <div style="font-size: 14px; color: var(--gray-500); margin-top: 2px;">Until Hotel Check-in</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 12px; width: 100%;">
+            <div class="escrow-step" style="flex: 1;">
+              <div class="escrow-step-label">95% to Hotel</div>
+              <div class="escrow-step-value">SAR 7,600</div>
+            </div>
+            <div class="escrow-step" style="flex: 1;">
+              <div class="escrow-step-label">5% Platform Fee</div>
+              <div class="escrow-step-value" style="color: var(--gold);">SAR 400</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 16px;">CORE FINANCIAL INFRASTRUCTURE</div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 10px;">
+          <div style="font-size: 14px; font-weight: 700;">Double-Entry Wallet Ledger</div>
+          <div style="font-size: 15px; color: var(--gray-400);">Audit-ready tracking of every Halala across all user wallets</div>
+        </div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 10px;">
+          <div style="font-size: 14px; font-weight: 700;">ZATCA Phase 2 Compliance</div>
+          <div style="font-size: 15px; color: var(--gray-400);">TLV-encoded QR codes on PDF tax invoices with seller/buyer VAT profiles</div>
+        </div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 10px;">
+          <div style="font-size: 14px; font-weight: 700;">Escrow Dispute Resolution</div>
+          <div style="font-size: 15px; color: var(--gray-400);">Agent-initiated disputes freeze escrow; Admin resolves with full audit trail</div>
+        </div>
+        <div class="card" style="padding: 14px 18px;">
+          <div style="font-size: 14px; font-weight: 700;">Multi-Currency Display</div>
+          <div style="font-size: 15px; color: var(--gray-400);">SAR primary with real-time conversion to USD, IDR, PKR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">06 / 12</div>
+</div>
+
+<!-- SLIDE 6: BUSINESS MODEL -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">BUSINESS MODEL</div>
+    <div class="section-title">The Revenue</div>
+    <div class="divider"></div>
+
+    <div class="grid-2" style="margin-bottom: 24px;">
+      <div class="revenue-box">
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px;">PRIMARY REVENUE: PLATFORM FEE</div>
+        <div class="solution-bullet">5% fee on every escrow settlement (the 80% hotel payout)</div>
+        <div class="solution-bullet">Collected automatically at check-in or 48-hour auto-release</div>
+        <div class="solution-bullet">Example: On SAR 10,000 booking, PHX EXCHANGE collects SAR 400</div>
+      </div>
+
+      <div class="card">
+        <div style="font-size: 15px; font-weight: 700; color: var(--teal); margin-bottom: 12px;">FUTURE REVENUE STREAMS</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div style="padding: 8px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+            <div style="font-size: 15px; font-weight: 700;">Premium Analytics</div>
+            <div style="font-size: 15px; color: var(--gray-500);">SaaS tiers for hotels — Q1 2027</div>
+          </div>
+          <div style="padding: 8px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+            <div style="font-size: 15px; font-weight: 700;">Broker Subscriptions</div>
+            <div style="font-size: 15px; color: var(--gray-500);">Priority access tiers — Q2 2027</div>
+          </div>
+          <div style="padding: 8px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+            <div style="font-size: 15px; font-weight: 700;">Payment Processing</div>
+            <div style="font-size: 15px; color: var(--gray-500);">Gateway margin — Q4 2027</div>
+          </div>
+          <div style="padding: 8px; background: rgba(255,255,255,0.03); border-radius: 8px;">
+            <div style="font-size: 15px; font-weight: 700;">Data Licensing</div>
+            <div style="font-size: 15px; color: var(--gray-500);">Market intelligence — Q4 2027</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px;">UNIT ECONOMICS</div>
+    <div class="grid-4">
+      <div class="stat-box">
+        <div class="stat-number" style="font-size: 20px;">SAR 10K+</div>
+        <div class="stat-label" style="font-size: 14px;">Avg Booking Value</div>
+        <div class="stat-detail">SAR 5K-50K range (2028)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" style="font-size: 20px;">SAR 2K</div>
+        <div class="stat-label" style="font-size: 14px;">Platform Fee / Booking</div>
+        <div class="stat-detail">SAR 200-2,000 range</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" style="font-size: 20px; color: var(--teal);">~0</div>
+        <div class="stat-label" style="font-size: 14px;">Marginal Cost</div>
+        <div class="stat-detail">Near zero (digital infra)</div>
+      </div>
+      <div class="stat-box" style="border-color: rgba(212,168,67,0.3);">
+        <div class="stat-number" style="font-size: 20px;">85%</div>
+        <div class="stat-label" style="font-size: 14px;">Gross Margin Target</div>
+        <div class="stat-detail">Highly scalable</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">07 / 12</div>
+</div>
+
+<!-- SLIDE 7: REGULATORY COMPLIANCE -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">REGULATORY COMPLIANCE</div>
+    <div class="section-title">The "SAMA" Slide</div>
+    <div class="divider"></div>
+    <div class="section-subtitle">Built from the ground up for Saudi regulatory compliance. Each future integration plugs into existing systems — no rebuilds required.</div>
+
+    <div class="grid-2" style="flex: 1;">
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--green); margin-bottom: 14px;">CURRENT STATUS: VIRTUAL LEDGER MVP (COMPLETE)</div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--green); font-size: 14px;">&#10003;</span>
+            <span style="font-size: 14px;">Full financial logic as internal ledger</span>
+          </div>
+        </div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--green); font-size: 14px;">&#10003;</span>
+            <span style="font-size: 14px;">ZATCA-compliant tax invoices with TLV QR</span>
+          </div>
+        </div>
+        <div class="card" style="padding: 14px 18px; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--green); font-size: 14px;">&#10003;</span>
+            <span style="font-size: 14px;">Ministry BRN integration for room blocks</span>
+          </div>
+        </div>
+        <div class="card" style="padding: 14px 18px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--green); font-size: 14px;">&#10003;</span>
+            <span style="font-size: 14px;">No real money movement — all tracked digitally</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px;">REGULATORY ROADMAP</div>
+        <div class="reg-row" style="font-size: 15px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid rgba(212,168,67,0.3);">
+          <div>Milestone</div>
+          <div>Timeline</div>
+          <div>Description</div>
+          <div>What We Have Today</div>
+        </div>
+        <div class="reg-row">
+          <div style="font-weight: 600; font-size: 15px;">SAMA Sandbox</div>
+          <div style="color: var(--gold); font-weight: 600;">Q3 2026</div>
+          <div style="color: var(--gray-400);">Fintech sandbox for real escrow</div>
+          <div style="color: var(--gray-400);">Full 80/20 logic ready</div>
+        </div>
+        <div class="reg-row">
+          <div style="font-weight: 600; font-size: 15px;">Nafath SSO</div>
+          <div style="color: var(--gold); font-weight: 600;">Q4 2026</div>
+          <div style="color: var(--gray-400);">Biometric business identity</div>
+          <div style="color: var(--gray-400);">Admin verification queue live</div>
+        </div>
+        <div class="reg-row">
+          <div style="font-weight: 600; font-size: 15px;">Nusuk Masar API</div>
+          <div style="color: var(--gold); font-weight: 600;">Q1 2027</div>
+          <div style="color: var(--gray-400);">Ministry BRN validation</div>
+          <div style="color: var(--gray-400);">BRN assignment built</div>
+        </div>
+        <div class="reg-row">
+          <div style="font-weight: 600; font-size: 15px;">MISA License</div>
+          <div style="color: var(--gold); font-weight: 600;">Q1 2027</div>
+          <div style="color: var(--gray-400);">B2B marketplace license</div>
+          <div style="color: var(--gray-400);">Platform as tech demo</div>
+        </div>
+        <div class="reg-row" style="border-bottom: none;">
+          <div style="font-weight: 600; font-size: 15px;">Full SAMA License</div>
+          <div style="color: var(--gold); font-weight: 600;">Q4 2027</div>
+          <div style="color: var(--gray-400);">Full payment processing</div>
+          <div style="color: var(--gray-400);">Sandbox track record</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">08 / 12</div>
+</div>
+
+<!-- SLIDE 8: COMPETITIVE LANDSCAPE -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">COMPETITIVE LANDSCAPE</div>
+    <div class="section-title">Why PHX Wins</div>
+    <div class="divider"></div>
+
+    <div style="margin-bottom: 24px;">
+      <div class="table-header comp-grid">
+        <div>Feature</div>
+        <div>WhatsApp / Phone</div>
+        <div>Legacy OTAs</div>
+        <div>PHX Exchange</div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Real-time Auctions</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-yes">Yes</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Escrow Protection</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-partial">Partial</span></div>
+        <div><span class="badge-yes">80/20 Auto</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">ZATCA Tax Invoices</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-partial">Partial</span></div>
+        <div><span class="badge-yes">Full TLV QR</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Ministry BRN</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-yes">Built-in</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Dispute Resolution</div>
+        <div><span class="badge-no">Reputation</span></div>
+        <div><span class="badge-partial">Manual</span></div>
+        <div><span class="badge-yes">Auto + Freeze</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Pilgrim Visa Tracking</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-yes">3-Step Live</span></div>
+      </div>
+      <div class="table-row comp-grid">
+        <div style="font-weight: 600; font-size: 14px;">Agent Storefront (B2C)</div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-no">No</span></div>
+        <div><span class="badge-yes">Built-in</span></div>
+      </div>
+    </div>
+
+    <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 14px;">OUR MOAT</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+      <div class="moat-item" style="flex-direction: column; text-align: center; gap: 6px;">
+        <div class="moat-num" style="margin: 0 auto;">1</div>
+        <div class="moat-text-title">Saudi-Specific Integration</div>
+        <div class="moat-text-desc">BRN, ZATCA, Nafath, Nusuk already architected</div>
+      </div>
+      <div class="moat-item" style="flex-direction: column; text-align: center; gap: 6px;">
+        <div class="moat-num" style="margin: 0 auto;">2</div>
+        <div class="moat-text-title">Purpose-Built for Hajj</div>
+        <div class="moat-text-desc">Not a generic hotel platform adapted for pilgrimage</div>
+      </div>
+      <div class="moat-item" style="flex-direction: column; text-align: center; gap: 6px;">
+        <div class="moat-num" style="margin: 0 auto;">3</div>
+        <div class="moat-text-title">Financial Infrastructure + Network Effects</div>
+        <div class="moat-text-desc">Escrow engine, double-entry ledger, multi-sided marketplace</div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">09 / 12</div>
+</div>
+
+<!-- SLIDE 9: TRACTION & ROADMAP -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">TRACTION & ROADMAP</div>
+    <div class="section-title">What We've Built</div>
+    <div class="divider"></div>
+
+    <div class="grid-2" style="margin-bottom: 24px;">
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--green); margin-bottom: 12px;">PLATFORM CORE (COMPLETE)</div>
+        <div class="feat-row" style="font-size: 15px; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; border-bottom: 2px solid rgba(34,197,94,0.3);">
+          <div>Component</div>
+          <div>Status</div>
+          <div>Detail</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Auction Engine</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">Real-time bidding, anti-sniping, WebSocket</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Escrow System</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">80/20 split, freeze, auto-release, disputes</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Wallet Ledger</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">6 transaction types, payouts, admin approval</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Tax Invoicing</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">ZATCA TLV QR, PDF generation</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Verification</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">Multi-doc compliance, admin review</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">4-Role Platform</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">Admin, Hotel, Broker, Agent dashboards</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">i18n + RTL</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">English, Arabic, Urdu, Farsi</div>
+        </div>
+        <div class="feat-row">
+          <div class="feat-name">Agent Storefront</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">B2C booking portal, CSV upload, group booking</div>
+        </div>
+        <div class="feat-row" style="border-bottom: none;">
+          <div class="feat-name">Pilgrim Pipeline</div>
+          <div><span class="status-built">BUILT</span></div>
+          <div style="color: var(--gray-400);">Nusuk sync, visa tracking, PDF vouchers</div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 12px;">WHAT COMES NEXT — WITH FUNDING</div>
+        <div style="display: flex; flex-direction: column; gap: 16px; padding-top: 8px;">
+          <div class="phase-card">
+            <div class="phase-number">PHASE 1</div>
+            <div class="phase-title" style="color: var(--green);">Platform Core — Complete</div>
+            <div class="phase-desc">Marketplace logic, escrow, compliance, safety systems. Virtual ledger with full audit trail.</div>
+          </div>
+          <div class="phase-card" style="border-color: rgba(212,168,67,0.2);">
+            <div class="phase-number">PHASE 2</div>
+            <div class="phase-title">Regulatory Sandbox — Q3-Q4 2026</div>
+            <div class="phase-desc">SAMA sandbox entry, Nafath biometric identity, payment gateway. Real SAR fund movement through escrow.</div>
+          </div>
+          <div class="phase-card" style="border-color: rgba(45,212,191,0.2);">
+            <div class="phase-number">PHASE 3</div>
+            <div class="phase-title">Live Market — 2027</div>
+            <div class="phase-desc">Full payment processing, Nusuk Masar API, premium analytics. First live auctions with real hotel inventory.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,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">PHX EXCHANGE</div>
+  <div class="slide-number">10 / 12</div>
+</div>
+
+<!-- SLIDE 10: THE FOUNDER -->
+<div class="slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="slide-content">
+    <div class="section-label">THE FOUNDER</div>
+    <div class="section-title">Solo Founder. Full Platform. Zero Dependencies.</div>
+    <div class="divider"></div>
+
+    <div class="grid-2" style="flex: 1; align-items: center;">
+      <div>
+        <div style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">Amina Yussuf Mohamed</div>
+        <div style="font-size: 16px; color: var(--gold); font-weight: 600; margin-bottom: 24px;">Founder & Lead Architect</div>
+        <div style="font-size: 15px; color: var(--gray-300); line-height: 1.7; margin-bottom: 24px;">
+          Senior Software Engineer and Architect specializing in high-concurrency enterprise systems. Background in Telecommunications and Cybersecurity, with the technical pedigree required to meet National Cybersecurity Authority (NCA) standards.
+        </div>
+        <div style="font-size: 15px; color: var(--gray-300); line-height: 1.7; margin-bottom: 24px;">
+          Single-handedly designed, engineered, and deployed the entire PHX EXCHANGE platform — auction engine, escrow system, compliance pipeline, four role-based dashboards, and all 162 verified requirements. Zero outsourced code. Zero technical debt.
+        </div>
+        <div class="blockquote" style="margin-top: 0; font-size: 14px;">
+          Seed funding will scale the team with domain-specific hires across engineering, operations, and business development.
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 20px;">WHAT ONE FOUNDER BUILT</div>
+        <div class="card" style="padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(212,168,67,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); font-size: 16px;">&#9776;</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600;">Full-Stack Platform</div>
+            <div style="font-size: 15px; color: var(--gray-400);">4 role-based dashboards, real-time auctions, escrow, marketplace</div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(45,212,191,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--teal); font-size: 16px;">&#9878;</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600;">Financial Operating System</div>
+            <div style="font-size: 15px; color: var(--gray-400);">Double-entry ledger, 80/20 escrow, dispute resolution, ZATCA invoicing</div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 20px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(59,130,246,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--blue); font-size: 16px;">&#9730;</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600;">Regulatory Compliance Layer</div>
+            <div style="font-size: 15px; color: var(--gray-400);">SAMA, ZATCA, NCA, NDMO frameworks — ready for sandbox entry</div>
+          </div>
+        </div>
+        <div class="card" style="padding: 16px 20px; display: flex; align-items: center; gap: 12px;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(34,197,94,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green); font-size: 16px;">&#10003;</div>
+          <div>
+            <div style="font-size: 15px; font-weight: 600;">Pilgrim-to-Ministry Pipeline</div>
+            <div style="font-size: 15px; color: var(--gray-400);">Storefront bookings, Nusuk sync, visa tracking, PDF vouchers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brand-footer"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAHRUExURRwlMC4zMLGVNtOuN7KVNi8zMB8nMGtgM8+rNtSvN8+qN01JMbWXNjA0MZF8NZ2GNTQ3MSMrMHhqNM6rN9CsN4V0NCYsMR0mMFtUMsCgNj8/MaiONa2SNURDMikuMdKtN9KuNywxMcilNntsM4h2NM+sN0tJMrSXNTc5MUhGMpuENbiaNlFMMl9XM7maNsmmN3JmNCAoMDk7MXZoM8elN1RPM72eNkJBMpF9NMGhNmBYMlVPMq2SNsGgNmZdM2ZcM8WkNz0+Mc+rN4d2NDg6MW1hM8OiNoNyNCQrMD4/McemNpmDNDM3MaKJNXprNIBwNDs8MbydNmRbM6WMNkxIMUBAMq6TNlVQM8qoN8SjNnFlM7OWNVlTMtOvN0dHMlxXM7GUNqmPNSsxMEREMa+TNbSYNoVzNB4nMJB8NLOXNsypNmNbM8uoN3tsNdGtN7ycNjo8MkxIMriaNYt5NCowMKaNNtSuN6CINjs9MZyENbKWNS8zMXdoNH1uNNCrN8SjN0lHMW5jM1dRM8CfNiIpMJJ9NUNDMaySNjU3Mod2NdGuN5WANa6TNZyFNSMqMFxVM8mnN2BYM0VEMr+fNsKiNkhHMm9jM3RmMzs9MDw9MP///81WlXcAAAABYktHRJqY32cSAAAACXBIWXMAAABgAAAAYADwa0LPAAAAB3RJTUUH6gMBBR0r0QzYRgAABwBJREFUeNrtnfd3VEUUx6PRhCeIJUQSFBNBccSCxEKwEZUAYm8IahQb2LEXVGyAvff/1pxsebP73t035d65M7P388tycjjvzPts+cA5LN+REUEQBEEQBEEQBEEQBEEQBEEQBEEQBIGYM84cHT3rbO5TsDE2vqpY5pzxMe6T8LB6TdFmzWruszBw7tpC47zzuc8TmAsunCh6WDd5EfeZArJ+arqoMD21nvtcodhwcVHLJRu5TxaESydnCoDZtZdxn46csfFN3fud2Nx6vPyK7o825Z7ELVf2fPK3fqGu2lr+9OpruM9IiJ6+lRttC1Dq2uuGIIl6+rZdv31EF6Dmbrgx9yTedHP1w64UoNSO+dHub9h5S3ZJ1NNX5k4XoNStt2WbRD19t2vPbq8Ape6Yrr5KMmBs1wLw/u4XoO6cvKv/cyJ9+tKnUxGg8ktiJX0NAjJLYk36GgXklMS69DULyCaJ9ekzEZBFEqH0mQlIPolw+kwFpJ3EAekzFpBwEgemz0JAoklsSJ+VgBST2JQ+OwHJJbE5fbYCkkqiSfrsBSSTRLP0uQhII4mG6XMSkEASjdPnKCDyJFqkz1lAzEm0SZ+7gGiTaJc+HwFRJtE2fX4Cokuiffp8BcSVRIf0eQuIKIlO6UMQEEkSHdOHIiCGJLqmD0cAexLd04clgDWJPunDE8CWRL/0YQrgSaJn+lAFMCTRO33IAgInESF96AJCJhEjffgCgiURJ30UAoIkESt9NALIk4iXPioBtElETB+ZAMIkoqaPUABREpHTRyqAIonY6aMVgJ5E/PRRC0BN4va7y/RRfKWFRoDavbine+yZSZ837d7udSY270O/fTIBSt2jfQljr8cB93cucu99BLdPKECpLfd3zr7f+4B0f80kFKAl0fuAdN/jIRWg5h5AEkB1+9QClBIBIkAEiAARIAJEgAgQASJABIgAESACRIAIEAEiQASIABEgAkSACBABIkAEiAARIAJEgAgQASJABHAKGNvVuv6DDw2ngPKf4D/8yBAK6N0XePSxIRNQ3ReY3zBEAmr3BfYs7h4WAY8D+wIHnhgKAYP2BbZuzF5A77fPWo/at70O4iYxPgHN+wKoSYxNgNm+AGIS4xJgvi+AlsSoBNjsCxx6EieJEQmw3Rd46umsBLjsC2AkMRIBjvsCCEmMQ4D7voB3EmMQ4Lcv4JlEfgH++wJeSWQXgLEv4JNEZgFY+wLuSWQVgLkv4JpERgHI+wKOSeQTgL8v4JRELgE0+wIOSeQRQLcvYJ1EFgGU+wK2SWQQQL0vYJfE4AJC7AvYJDGwgED7AhZJDCsg3L6AcRJDCgi7L2CYxHACwu8LGCUxmACOfQGTJAYSwLUv0JzEIAI49wWakhhAAPO+QEMS6QXw7wsMTCK1gDj2BQYkkVZAPPsCYBJJBcS0LwAlkVBAbPsC9UkkExDjvkBdEokERLovUJNEGgHx7gtUkkghIO59gb4k4guIf1+gJ4noAlLYF9CTiCwglX2BMomoAlLaF+gkEVFAYvsC7STiCUhvX2AliVgC0twXWE4ikoBk9wXmkQTgpo9WQG8SkQWkuC+AKCDRfQEsAQnvC6AISHlfwEfAUucaO59JTcCzhzpnX/I44OGuxaXnnk9JwAsvdp+74rDHAfe9pDXwyNFUBMy9PFue+xW/D6+pbeWlXn0tDQGLr6Oe+Y03y8sdeyt+AW+/U5535l2MV+1775dX/OBD1BriC/joY+3Pgcc/QTrnjmPlRdd9GrOAz06UJ/38C8STfrmK5MLIAr76muiJWubkqVmClxaqgNPflOlDfquu8O1x7A8XXAHffU/3Yd0GP4l4ApDTB4GdRCwB+OmDQE4ijgCa9EGgJhFFAFn6IBCTiCCAMn0QeEn0FkCdPgisJPoKCJA+CJwk+gkIlD4IjCT6CAiXPgiEJLoLCJs+CO8kOgsInj4IzyQ6CuBIH4RfEp0EcKUPwieJLgIY0wfhnkR7Aczpg3BNoq0A/vRBOCbRTkAc6YNwSqKVgGjSB+GQRAsBMaUPwj6JxgJiSx+EbRJNBUSYPgi7JJoJiDR9EDZJNBEQb/ogLJLYLCDu9EEYJ7FRQPTpgzBMYoOAFNIHYZbEgQJSSR+ESRIHCUgofRDNSYQFJJY+iKYkQgLSSx9EQxLrBaSZPoiBSawVkGz6IAYksUZAyumDgJNYEZB6+iCgJPYLyCB9EPVJ7BWQSfog6pKoC8gnfRA1SSwF5JU+iEoSuwKySx9EXxLbAnJMH8TJH7SX+o+thwNa+n76mfuE5OhJ7Cez9EH88mv97R/8jftkoTh6ZLZ6+xRfyYkXPYmZpw/i9z/02//zL+7zMPB39/87OPEP91l46CRxCNIH8e9CUSz8x30KQRAEQRAEQRCE4eN/EAKbsv1nmW4AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjYtMDMtMDFUMDU6Mjk6MjUrMDA6MDDaGCKIAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDI2LTAzLTAxVDA1OjI5OjI1KzAwOjAwq0WaNAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wMy0wMVQwNToyOTo0MyswMDowMFnvh1YAAAAASUVORK5CYII=">PHX EXCHANGE</div>
+  <div class="slide-number">11 / 12</div>
+</div>
+
+<!-- SLIDE 12: CONTACT -->
+<div class="slide contact-slide">
+  <div class="slide-bg"></div>
+  <div class="gold-accent-top"></div>
+  <div class="corner-decoration corner-tl"></div>
+  <div class="corner-decoration corner-br"></div>
+  <div class="slide-content" style="justify-content: center; align-items: center; text-align: center;">
+    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 48px; justify-content: center;"><img src="data:image/png;base64,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" style="height: 56px; width: auto;"><div class="title-phx" style="margin-bottom: 0;">PHX EXCHANGE</div></div>
+    <div class="contact-name">Amina Yussuf Mohamed</div>
+    <div class="contact-role">Founder & Lead Architect</div>
+    <div class="contact-tagline" style="margin: 0 auto 48px;">
+      "Where Hotels Auction. Brokers Trade. Agents Book."
+    </div>
+    <div style="display: flex; gap: 40px; justify-content: center; margin-bottom: 48px;">
+      <div class="stat-box" style="padding: 16px 28px;">
+        <div class="stat-number" style="font-size: 28px;">162</div>
+        <div class="stat-label">Requirements Delivered</div>
+      </div>
+      <div class="stat-box" style="padding: 16px 28px;">
+        <div class="stat-number" style="font-size: 28px;">100%</div>
+        <div class="stat-label">Platform Complete</div>
+      </div>
+      <div class="stat-box" style="padding: 16px 28px;">
+        <div class="stat-number" style="font-size: 28px;">4 + 4</div>
+        <div class="stat-label">Roles & Languages</div>
+      </div>
+    </div>
+    <div style="font-size: 14px; color: var(--gray-400);">
+      March 2026 &nbsp;&bull;&nbsp; Ramadan 1447H
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

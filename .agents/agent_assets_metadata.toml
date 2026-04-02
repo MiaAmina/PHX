@@ -1,0 +1,260 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "39g4ToNViFrsEGFxd8xNY"
+uri = "file://phx-docs/pdf/PHX_Strategic_White_Paper_Vision2030.pdf"
+type = "pdf"
+title = "PHX White Paper (12 pages)"
+
+[[outputs]]
+id = "xPEm0wO3iML_yZVIbVX4G"
+uri = "file://phx-docs/pdf/PHX_Executive_Summary.pdf"
+type = "pdf"
+title = "PHX Executive Summary (6 pages)"
+
+[[outputs]]
+id = "aHuGMC04We8aKrD5FHHXh"
+uri = "file://phx-docs/pdf/PHX_Technical_Appendix_Architecture.pdf"
+type = "pdf"
+title = "PHX Technical Appendix — Formatted with Inter Font"
+
+[[outputs]]
+id = "XfpwQe4TG1ZsfHf00Bqtp"
+uri = "file://phx-docs/pdf/PHX_Investor_Pitch_Deck.pdf"
+type = "pdf"
+title = "PHX Exchange Investor Pitch Deck (Larger Text)"
+
+[[outputs]]
+id = "FE0iyofonH1TVUjqBkHRA"
+uri = "file://phx-docs/screenshots/01_login_page.png"
+type = "image"
+title = "01 - Login Page"
+
+[[outputs]]
+id = "giUwG27Y-xIY5wXlkFiE6"
+uri = "file://phx-docs/screenshots/02_admin_dashboard.png"
+type = "image"
+title = "02 - Admin Dashboard (Ministry View)"
+
+[[outputs]]
+id = "BgKa7AoucB7OOadob1dee"
+uri = "file://phx-docs/screenshots/03_admin_users.png"
+type = "image"
+title = "03 - Admin User Management"
+
+[[outputs]]
+id = "g1Wl5MU7dvzTMg4FpLZE8"
+uri = "file://phx-docs/screenshots/04_admin_reports.png"
+type = "image"
+title = "04 - Admin Financial Reports"
+
+[[outputs]]
+id = "1UPLGbtj2b1fiIFNf9uWe"
+uri = "file://phx-docs/screenshots/05_admin_escrow.png"
+type = "image"
+title = "05 - Admin Escrow Ledger"
+
+[[outputs]]
+id = "KdMI0Nz4TV_PRwM_QvPos"
+uri = "file://phx-docs/screenshots/06_auctions_overview.png"
+type = "image"
+title = "06 - Live Auctions"
+
+[[outputs]]
+id = "gHR7gS2WMADMZWLFEuwZJ"
+uri = "file://phx-docs/screenshots/07_hotel_dashboard.png"
+type = "image"
+title = "07 - Hotel Dashboard"
+
+[[outputs]]
+id = "IrUi021XxB79bJewSpsKr"
+uri = "file://phx-docs/screenshots/08_hotel_auctions.png"
+type = "image"
+title = "08 - Hotel Auction View"
+
+[[outputs]]
+id = "8wEuz3rB7N6nNUppiwdC8"
+uri = "file://phx-docs/screenshots/09_broker_dashboard.png"
+type = "image"
+title = "09 - Broker Dashboard"
+
+[[outputs]]
+id = "9zPA4WSuoL7ctxdj-wie5"
+uri = "file://phx-docs/screenshots/10_broker_inventory.png"
+type = "image"
+title = "10 - Broker Inventory & Markup"
+
+[[outputs]]
+id = "aiiNgYxqKa8ysbiqKtWD-"
+uri = "file://phx-docs/screenshots/11_agent_dashboard.png"
+type = "image"
+title = "11 - Agent Dashboard"
+
+[[outputs]]
+id = "A1tEa51RlMgiSLJoDafEZ"
+uri = "file://phx-docs/screenshots/12_agent_marketplace.png"
+type = "image"
+title = "12 - Agent Marketplace (Book Now)"
+
+[[outputs]]
+id = "mSZpOrxykPim_y5EJtVe3"
+uri = "file://phx-docs/screenshots/13_agent_bookings.png"
+type = "image"
+title = "13 - Agent Bookings & Pilgrim Management"
+
+[[outputs]]
+id = "v55VEkUnnaFa_2VQi-zsc"
+uri = "file://phx-docs/screenshots/14_agent_storefront.png"
+type = "image"
+title = "14 - Agent Storefront Setup"
+
+[[outputs]]
+id = "BMkqs3dIW0J4xM2dR0k1d"
+uri = "file://phx-docs/screenshots/15_agent_transactions.png"
+type = "image"
+title = "15 - Wallet & Transaction Ledger"
+
+[[outputs]]
+id = "EIszrI9GPIQODIwBpfgNE"
+uri = "file://phx-docs/screenshots/16_public_storefront.png"
+type = "image"
+title = "16 - Public Pilgrim Storefront"
+
+[[outputs]]
+id = "8NHcU1xYeAicxd7rfK2g3"
+uri = "file://phx-docs/pdf/PHX_Product_Screenshots.pdf"
+type = "pdf"
+title = "PHX Product Screenshots Guide (17 pages)"
+
+[[outputs]]
+id = "rgyufnVwxZc7Z5dyWdG88"
+uri = "file://phx-docs/pdf/PHX_Demo_Video.mp4"
+type = "video"
+title = "PHX Exchange - Full Stakeholder Demo (11:15)"
+
+[[outputs]]
+id = "vRopOR9FnCeJ87QbyyL3A"
+uri = "file://phx-docs/PHX_Future_Features_Roadmap.md"
+type = "text"
+title = "PHX Exchange — Future Features Roadmap (15 Features)"
+
+[[outputs]]
+id = "MiXw_vo4Gc7VRIFbNAXhk"
+uri = "file://docs/08-predeployment-guide.md"
+type = "text"
+title = "PHX Exchange — Pre-Deployment & App Settings Guide"
+
+[[outputs]]
+id = "_eeVN8CtGAzmNzj5R1CHl"
+uri = "file://phx-docs/pdf/PHX_Investor_Pitch_Deck_Overview.pdf"
+type = "pdf"
+title = "PHX Exchange Overview Deck (For Salman - No Funding Slide)"
+
+[[outputs]]
+id = "KuIWrXTQ2BGvEAavIPVc5"
+uri = "file://docs/02-requirements-and-design.md"
+type = "text"
+title = "PHX Exchange - Requirements & Design Document (162 Requirements)"
+
+[[outputs]]
+id = "4PIM0odU7D1Tf7B1nbW80"
+uri = "file://phx-docs/pdf/PHX_requirements-and-design.pdf"
+type = "pdf"
+title = "Requirements & Design (162 Requirements)"
+
+[[outputs]]
+id = "eu3rYohy4SltZ_efrijgp"
+uri = "file://phx-docs/pdf/PHX_technical-specs.pdf"
+type = "pdf"
+title = "Technical Specifications"
+
+[[outputs]]
+id = "3bHuaDdkvjPUaLq5374k6"
+uri = "file://phx-docs/pdf/PHX_user-stories.pdf"
+type = "pdf"
+title = "User Stories"
+
+[[outputs]]
+id = "95-twkQRQie_yKhUOkGtm"
+uri = "file://phx-docs/pdf/PHX_user-manual.pdf"
+type = "pdf"
+title = "User Manual"
+
+[[outputs]]
+id = "uTL_1AqYfXonqU2OhORmN"
+uri = "file://phx-docs/pdf/PHX_predeployment-guide.pdf"
+type = "pdf"
+title = "Pre-Deployment Guide"
+
+[[outputs]]
+id = "bXVJ28r8jGelapwNG3YPW"
+uri = "file://phx-docs/pdf/PHX_investor-pitch-deck.pdf"
+type = "pdf"
+title = "Investor Pitch Deck (Markdown Version)"
+
+[[outputs]]
+id = "4lL3D70zJarmaa96evMLB"
+uri = "file://phx-docs/pdf/PHX_e2e-testing.pdf"
+type = "pdf"
+title = "End-to-End Testing"
+
+[[outputs]]
+id = "k5rwbbniryXckg1vunQP3"
+uri = "file://phx-docs/pdf/use-cases.pdf"
+type = "pdf"
+title = "Use Cases"
+
+[[outputs]]
+id = "l0gpRHBli2Ht4eAplXqYL"
+uri = "file://phx-docs/pdf/user-manual.pdf"
+type = "pdf"
+title = "User Manual (Alternate)"
+
+[[outputs]]
+id = "TDFZSAxPEK4-8qf8SOWrj"
+uri = "file://phx-docs/pdf/PHX_somalia-biodiversity-platform-proposal.pdf"
+type = "pdf"
+title = "Somalia Biodiversity Platform Proposal"
+
+[[outputs]]
+id = "94Pj3FNecj8HjH5HjS7zu"
+uri = "file://phx-docs/pdf/PHX_Future_Features.pdf"
+type = "pdf"
+title = "PHX Exchange — Future Features & Enhancements"
+
+[[outputs]]
+id = "5dR1x_mhJamZK1Gm0b_a5"
+uri = "file://phx-docs/pdf/PHX_Future_Features_Roadmap.pdf"
+type = "pdf"
+title = "PHX Exchange — Future Features Roadmap (24 Items, Updated)"
+
+[[outputs]]
+id = "zVb9ZcGDUFBeLrexg2feM"
+uri = "file://phx-docs/pdf/PHX_future-features.pdf"
+type = "pdf"
+title = "PHX Exchange — Future Features & Enhancements"
+
+[[outputs]]
+id = "4XxOKyCu7ctiT_tMsbuD3"
+uri = "file://phx-docs/pdf/PHX_Manual_Test_Cases.pdf"
+type = "pdf"
+title = "PHX Exchange — Complete Manual Test Cases (171 Tests)"
+
+[[outputs]]
+id = "OeBq6oMYf11laOqOk5TvX"
+uri = "file://phx-docs/pdf/PHX_FOUNDER_BIO.pdf"
+type = "pdf"
+title = "Founder Bio — Order: SSA → UC Davis → InComm"
+
+[[outputs]]
+id = "gWry5If5_W7E5m78YiHAM"
+uri = "file://phx-docs/pdf/PHX_FOUNDER_RESUME.pdf"
+type = "pdf"
+title = "Resume — Technical Project Manager Title Updated"
+
+[[outputs]]
+id = "0dEmPegiDSsVPIWmZHGDq"
+uri = "file://phx-docs/pdf/PHX_user-manual_AR.pdf"
+type = "pdf"
+title = "PHX Exchange - دليل المستخدم (Arabic User Manual)"

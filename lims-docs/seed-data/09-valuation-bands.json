@@ -1,0 +1,73 @@
+{
+  "districtValuationBands": [
+    {
+      "districtId": 1,
+      "districtName": "Hodan",
+      "baseBand": {
+        "name": "Hodan Urban Standard",
+        "weight": 1.0,
+        "sqmValue": 180.00,
+        "creationDate": "2025-01-01"
+      },
+      "bands": [
+        { "band": "A", "lower": 0, "higher": 20000, "width": 20000, "weight": 0.50, "midpointValue": 10000, "midpointValueRatio": 0.056, "bandSqmValues": 90 },
+        { "band": "B", "lower": 20000, "higher": 60000, "width": 40000, "weight": 0.70, "midpointValue": 40000, "midpointValueRatio": 0.222, "bandSqmValues": 126 },
+        { "band": "C", "lower": 60000, "higher": 120000, "width": 60000, "weight": 1.00, "midpointValue": 90000, "midpointValueRatio": 0.500, "bandSqmValues": 180 },
+        { "band": "D", "lower": 120000, "higher": 200000, "width": 80000, "weight": 1.30, "midpointValue": 160000, "midpointValueRatio": 0.889, "bandSqmValues": 234 },
+        { "band": "E", "lower": 200000, "higher": 350000, "width": 150000, "weight": 1.60, "midpointValue": 275000, "midpointValueRatio": 1.528, "bandSqmValues": 288 },
+        { "band": "F", "lower": 350000, "higher": 700000, "width": 350000, "weight": 2.00, "midpointValue": 525000, "midpointValueRatio": 2.917, "bandSqmValues": 360 }
+      ],
+      "totals": {
+        "widthTotal": 700000,
+        "lowerLimit": 0,
+        "higherLimit": 700000
+      }
+    },
+    {
+      "districtId": 3,
+      "districtName": "Hamar Weyne",
+      "baseBand": {
+        "name": "Hamar Weyne Premium",
+        "weight": 1.0,
+        "sqmValue": 350.00,
+        "creationDate": "2025-01-01"
+      },
+      "bands": [
+        { "band": "A", "lower": 0, "higher": 50000, "width": 50000, "weight": 0.50, "midpointValue": 25000, "midpointValueRatio": 0.033, "bandSqmValues": 175 },
+        { "band": "B", "lower": 50000, "higher": 120000, "width": 70000, "weight": 0.75, "midpointValue": 85000, "midpointValueRatio": 0.113, "bandSqmValues": 263 },
+        { "band": "C", "lower": 120000, "higher": 250000, "width": 130000, "weight": 1.00, "midpointValue": 185000, "midpointValueRatio": 0.247, "bandSqmValues": 350 },
+        { "band": "D", "lower": 250000, "higher": 400000, "width": 150000, "weight": 1.40, "midpointValue": 325000, "midpointValueRatio": 0.433, "bandSqmValues": 490 },
+        { "band": "E", "lower": 400000, "higher": 600000, "width": 200000, "weight": 1.80, "midpointValue": 500000, "midpointValueRatio": 0.667, "bandSqmValues": 630 },
+        { "band": "F", "lower": 600000, "higher": 1500000, "width": 900000, "weight": 2.50, "midpointValue": 1050000, "midpointValueRatio": 1.400, "bandSqmValues": 875 }
+      ],
+      "totals": {
+        "widthTotal": 1500000,
+        "lowerLimit": 0,
+        "higherLimit": 1500000
+      }
+    },
+    {
+      "districtId": 18,
+      "districtName": "Garoowe",
+      "baseBand": {
+        "name": "Garoowe Standard",
+        "weight": 1.0,
+        "sqmValue": 45.00,
+        "creationDate": "2025-01-01"
+      },
+      "bands": [
+        { "band": "A", "lower": 0, "higher": 5000, "width": 5000, "weight": 0.50, "midpointValue": 2500, "midpointValueRatio": 0.083, "bandSqmValues": 23 },
+        { "band": "B", "lower": 5000, "higher": 20000, "width": 15000, "weight": 0.75, "midpointValue": 12500, "midpointValueRatio": 0.417, "bandSqmValues": 34 },
+        { "band": "C", "lower": 20000, "higher": 50000, "width": 30000, "weight": 1.00, "midpointValue": 35000, "midpointValueRatio": 1.167, "bandSqmValues": 45 },
+        { "band": "D", "lower": 50000, "higher": 100000, "width": 50000, "weight": 1.20, "midpointValue": 75000, "midpointValueRatio": 2.500, "bandSqmValues": 54 },
+        { "band": "E", "lower": 100000, "higher": 200000, "width": 100000, "weight": 1.50, "midpointValue": 150000, "midpointValueRatio": 5.000, "bandSqmValues": 68 },
+        { "band": "F", "lower": 200000, "higher": 500000, "width": 300000, "weight": 2.00, "midpointValue": 350000, "midpointValueRatio": 11.667, "bandSqmValues": 90 }
+      ],
+      "totals": {
+        "widthTotal": 500000,
+        "lowerLimit": 0,
+        "higherLimit": 500000
+      }
+    }
+  ]
+}

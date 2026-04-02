@@ -1,0 +1,119 @@
+{
+  "notaries": [
+    {
+      "id": 1,
+      "fullName": "Hassan Abdi Yusuf",
+      "notaryTypeId": 1,
+      "licenseNumber": "NOT-BRA-2024-001",
+      "issuingAuthority": "Benadir Regional Administration",
+      "qualificationTypeId": 1,
+      "programTypeId": 1,
+      "experience": "15 years",
+      "phone": "+252-61-9990011",
+      "email": "hassan.notary@benadir.gov.so",
+      "address": "Office 4, Bakaaraha Business Center, Hamar Weyne",
+      "active": true
+    },
+    {
+      "id": 2,
+      "fullName": "Amina Osman Shire",
+      "notaryTypeId": 1,
+      "licenseNumber": "NOT-BRA-2024-002",
+      "issuingAuthority": "Benadir Regional Administration",
+      "qualificationTypeId": 3,
+      "programTypeId": 3,
+      "experience": "8 years",
+      "phone": "+252-61-7773344",
+      "email": "amina.notary@benadir.gov.so",
+      "address": "Suite 12, Hodan Legal Services Building, Hodan",
+      "active": true
+    }
+  ],
+  "notaryAccounts": [
+    {
+      "id": 1,
+      "notaryId": 1,
+      "accountNumber": "NA-2025-0001",
+      "balance": 15000,
+      "currency": "USD",
+      "transactions": [
+        {
+          "id": 1,
+          "date": "2025-07-20",
+          "type": "Credit",
+          "amount": 5000,
+          "description": "Service fee — Property Sale, PRN-2025-00001",
+          "serviceTypeId": 1,
+          "relatedParcelId": 1
+        },
+        {
+          "id": 2,
+          "date": "2025-08-05",
+          "type": "Credit",
+          "amount": 3500,
+          "description": "Service fee — Property Transfer, PRN-2025-00002",
+          "serviceTypeId": 2,
+          "relatedParcelId": 2
+        },
+        {
+          "id": 3,
+          "date": "2025-09-10",
+          "type": "Credit",
+          "amount": 1500,
+          "description": "Service fee — Power of Attorney",
+          "serviceTypeId": 3,
+          "relatedParcelId": null
+        },
+        {
+          "id": 4,
+          "date": "2025-09-15",
+          "type": "Debit",
+          "amount": 2500,
+          "description": "Tax remittance — Sales tax fees Q3 2025",
+          "serviceTypeId": null,
+          "relatedParcelId": null
+        }
+      ]
+    }
+  ],
+  "notaryCertificates": [
+    {
+      "id": 1,
+      "notaryId": 1,
+      "certificateNumber": "CERT-BRA-2025-00001",
+      "categoryId": 1,
+      "issuedDate": "2025-07-20",
+      "parcelId": 1,
+      "buyerOwnerId": 1,
+      "sellerName": "Yusuf Mohamed Ali",
+      "salePrice": 120000,
+      "salesTaxFeeId": 2,
+      "taxAmount": 6000,
+      "serviceTypeId": 1,
+      "status": "Registered",
+      "witnesses": [
+        { "name": "Ali Hassan Omar", "idNumber": "NID-2024-01122", "phone": "+252-61-1112233" },
+        { "name": "Khadija Farah Aden", "idNumber": "NID-2024-01456", "phone": "+252-61-4445566" }
+      ]
+    },
+    {
+      "id": 2,
+      "notaryId": 1,
+      "certificateNumber": "CERT-BRA-2025-00002",
+      "categoryId": 2,
+      "issuedDate": "2025-08-05",
+      "parcelId": 2,
+      "buyerOwnerId": 2,
+      "sellerName": "Abdullahi Issa Guled",
+      "salePrice": 250000,
+      "salesTaxFeeId": 2,
+      "taxAmount": 12500,
+      "serviceTypeId": 2,
+      "status": "Registered",
+      "witnesses": [
+        { "name": "Omar Yusuf Hassan", "idNumber": "NID-2024-02234", "phone": "+252-61-7778899" },
+        { "name": "Fartun Ali Jama", "idNumber": "NID-2024-02567", "phone": "+252-63-3334455" }
+      ]
+    }
+  ]
+}

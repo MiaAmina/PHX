@@ -1,0 +1,190 @@
+{
+  "identificationDocumentTypes": [
+    { "id": 1, "type": "National ID Card" },
+    { "id": 2, "type": "Passport" },
+    { "id": 3, "type": "Driving License" },
+    { "id": 4, "type": "Refugee ID (UNHCR)" },
+    { "id": 5, "type": "Military ID" },
+    { "id": 6, "type": "Birth Certificate" },
+    { "id": 7, "type": "Clan Elder Attestation" }
+  ],
+  "genderTypes": [
+    { "id": 1, "gender": "Male / Lab" },
+    { "id": 2, "gender": "Female / Dhedig" }
+  ],
+  "maritalStatusTypes": [
+    { "id": 1, "status": "Single / Doob" },
+    { "id": 2, "status": "Married / Guur" },
+    { "id": 3, "status": "Divorced / Furitaan" },
+    { "id": 4, "status": "Widowed / Carmal" }
+  ],
+  "educationLevelTypes": [
+    { "id": 1, "level": "No Formal Education" },
+    { "id": 2, "level": "Quranic School (Dugsi)" },
+    { "id": 3, "level": "Primary School" },
+    { "id": 4, "level": "Secondary School" },
+    { "id": 5, "level": "Vocational / Technical" },
+    { "id": 6, "level": "University Degree" },
+    { "id": 7, "level": "Postgraduate" }
+  ],
+  "colorTypes": [
+    { "id": 1, "color": "Black" },
+    { "id": 2, "color": "Brown" },
+    { "id": 3, "color": "Light Brown" },
+    { "id": 4, "color": "Dark" }
+  ],
+  "parcelTypes": [
+    { "id": 1, "parcelType": "Residential / Guri" },
+    { "id": 2, "parcelType": "Commercial / Ganacsi" },
+    { "id": 3, "parcelType": "Agricultural / Beeraha" },
+    { "id": 4, "parcelType": "Industrial / Warshadaha" },
+    { "id": 5, "parcelType": "Government / Dawladda" },
+    { "id": 6, "parcelType": "Religious / Masaajidka" },
+    { "id": 7, "parcelType": "Mixed Use" },
+    { "id": 8, "parcelType": "Vacant Land" }
+  ],
+  "parcelUseTypes": [
+    { "id": 1, "parcelUseType": "Owner Occupied" },
+    { "id": 2, "parcelUseType": "Rented Out" },
+    { "id": 3, "parcelUseType": "Vacant / Unused" },
+    { "id": 4, "parcelUseType": "Under Construction" },
+    { "id": 5, "parcelUseType": "Abandoned" },
+    { "id": 6, "parcelUseType": "Farming / Cultivation" },
+    { "id": 7, "parcelUseType": "Livestock Grazing" },
+    { "id": 8, "parcelUseType": "Commercial Operation" }
+  ],
+  "landUseTypes": [
+    { "id": 1, "utype": "Residential" },
+    { "id": 2, "utype": "Commercial" },
+    { "id": 3, "utype": "Agricultural" },
+    { "id": 4, "utype": "Industrial" },
+    { "id": 5, "utype": "Institutional" },
+    { "id": 6, "utype": "Recreational" },
+    { "id": 7, "utype": "Transportation" },
+    { "id": 8, "utype": "Open Space" },
+    { "id": 9, "utype": "Water Body" },
+    { "id": 10, "utype": "Forest / Woodland" }
+  ],
+  "ownershipTypes": [
+    { "id": 1, "otype": "Freehold / Lahaansho buuxda" },
+    { "id": 2, "otype": "Leasehold / Kireeye" },
+    { "id": 3, "otype": "Government Land / Dhulka dawladda" },
+    { "id": 4, "otype": "Communal / Clan Land / Dhulka beelaha" },
+    { "id": 5, "otype": "Trust Land" },
+    { "id": 6, "otype": "Customary Tenure" },
+    { "id": 7, "otype": "Contested / Disputed" }
+  ],
+  "occupationTypes": [
+    { "id": 1, "occupation": "Owner Occupier" },
+    { "id": 2, "occupation": "Tenant" },
+    { "id": 3, "occupation": "Squatter / Informal" },
+    { "id": 4, "occupation": "IDP Settlement" },
+    { "id": 5, "occupation": "Vacant" },
+    { "id": 6, "occupation": "Caretaker" },
+    { "id": 7, "occupation": "Government Use" }
+  ],
+  "valuationMethodTypes": [
+    { "id": 1, "valuationMethod": "Market Comparison" },
+    { "id": 2, "valuationMethod": "Cost Approach" },
+    { "id": 3, "valuationMethod": "Income Approach" },
+    { "id": 4, "valuationMethod": "Mass Appraisal" },
+    { "id": 5, "valuationMethod": "Band-Based Assessment" }
+  ],
+  "propertyCategoryTypes": [
+    { "id": 1, "type": "Permanent Structure" },
+    { "id": 2, "type": "Semi-Permanent" },
+    { "id": 3, "type": "Temporary / Makeshift" },
+    { "id": 4, "type": "Under Construction" },
+    { "id": 5, "type": "Ruins / Destroyed" },
+    { "id": 6, "type": "Bare Land" }
+  ],
+  "numberOfFloors": [
+    { "id": 1, "value": "1" },
+    { "id": 2, "value": "2" },
+    { "id": 3, "value": "3" },
+    { "id": 4, "value": "4" },
+    { "id": 5, "value": "5" },
+    { "id": 6, "value": "6-10" },
+    { "id": 7, "value": "10+" }
+  ],
+  "standardFloorHeightRangeTypes": [
+    { "id": 1, "value": "2.4m - 2.7m (Standard)" },
+    { "id": 2, "value": "2.7m - 3.0m (Above Standard)" },
+    { "id": 3, "value": "3.0m - 3.5m (High)" },
+    { "id": 4, "value": "3.5m+ (Extra High)" },
+    { "id": 5, "value": "Below 2.4m (Low)" }
+  ],
+  "unitTypes": [
+    { "id": 1, "unit": "Square Meters (sqm)" },
+    { "id": 2, "unit": "Hectares (ha)" },
+    { "id": 3, "unit": "Square Feet (sqft)" },
+    { "id": 4, "unit": "Acres" },
+    { "id": 5, "unit": "Meters (m)" },
+    { "id": 6, "unit": "Feet (ft)" },
+    { "id": 7, "unit": "Centimeters (cm)" },
+    { "id": 8, "unit": "Kilometers (km)" }
+  ],
+  "instrumentTypes": [
+    { "id": 1, "type": "Sale Agreement" },
+    { "id": 2, "type": "Gift / Hadiyad" },
+    { "id": 3, "type": "Inheritance / Dhaxal" },
+    { "id": 4, "type": "Court Order" },
+    { "id": 5, "type": "Government Grant" },
+    { "id": 6, "type": "Lease Agreement" },
+    { "id": 7, "type": "Mortgage / Charge" },
+    { "id": 8, "type": "Subdivision" },
+    { "id": 9, "type": "Amalgamation" },
+    { "id": 10, "type": "Compulsory Acquisition" }
+  ],
+  "fileStatusTypes": [
+    { "id": 1, "status": "Active / Open" },
+    { "id": 2, "status": "Closed / Complete" },
+    { "id": 3, "status": "Pending Review" },
+    { "id": 4, "status": "Disputed" },
+    { "id": 5, "status": "Suspended" },
+    { "id": 6, "status": "Archived" }
+  ],
+  "feeTypes": [
+    { "id": 1, "typeFeeOrRate": "Registration Fee", "isFixedFee": true, "description": "One-time fee for new parcel registration" },
+    { "id": 2, "typeFeeOrRate": "Annual Property Tax", "isFixedFee": false, "description": "Percentage-based annual property tax" },
+    { "id": 3, "typeFeeOrRate": "Transfer Fee", "isFixedFee": false, "description": "Fee for ownership transfer (percentage of sale price)" },
+    { "id": 4, "typeFeeOrRate": "Search Fee", "isFixedFee": true, "description": "Fee for property search/verification" },
+    { "id": 5, "typeFeeOrRate": "Survey Fee", "isFixedFee": true, "description": "Fee for land surveying services" },
+    { "id": 6, "typeFeeOrRate": "Building Permit Fee", "isFixedFee": true, "description": "Fee for building construction permit" },
+    { "id": 7, "typeFeeOrRate": "Late Payment Penalty", "isFixedFee": false, "description": "Percentage penalty for overdue tax payments" },
+    { "id": 8, "typeFeeOrRate": "Subdivision Fee", "isFixedFee": true, "description": "Fee for subdividing a parcel" }
+  ],
+  "urbanAssessmentDiscountRates": [
+    { "id": 1, "discountRate": 5 },
+    { "id": 2, "discountRate": 10 },
+    { "id": 3, "discountRate": 15 },
+    { "id": 4, "discountRate": 20 },
+    { "id": 5, "discountRate": 25 }
+  ],
+  "geographicZones": [
+    { "id": 1, "gArea": "Zone A - Central Mogadishu" },
+    { "id": 2, "gArea": "Zone B - Greater Mogadishu" },
+    { "id": 3, "gArea": "Zone C - Suburban" },
+    { "id": 4, "gArea": "Zone D - Peri-Urban" },
+    { "id": 5, "gArea": "Zone E - Rural" }
+  ],
+  "institutionTypes": [
+    { "id": 1, "name": "Federal Government" },
+    { "id": 2, "name": "Federal Member State" },
+    { "id": 3, "name": "Municipal Government" },
+    { "id": 4, "name": "International NGO" },
+    { "id": 5, "name": "Local NGO" },
+    { "id": 6, "name": "Private Sector" },
+    { "id": 7, "name": "Religious Institution" },
+    { "id": 8, "name": "Educational Institution" }
+  ],
+  "residenceTypes": [
+    { "id": 1, "name": "House / Guri" },
+    { "id": 2, "name": "Apartment / Flat" },
+    { "id": 3, "name": "Villa" },
+    { "id": 4, "name": "Traditional Dwelling (Aqal)" },
+    { "id": 5, "name": "IDP Shelter" },
+    { "id": 6, "name": "Compound" },
+    { "id": 7, "name": "Room (Qol)" }
+  ]
+}

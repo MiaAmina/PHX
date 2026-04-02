@@ -1,0 +1,37 @@
+{
+  "makes": [
+    { "id": 1, "name": "Toyota", "countryId": null, "photo": null },
+    { "id": 2, "name": "Nissan", "countryId": null, "photo": null },
+    { "id": 3, "name": "Mitsubishi", "countryId": null, "photo": null },
+    { "id": 4, "name": "Land Rover", "countryId": null, "photo": null },
+    { "id": 5, "name": "Mercedes-Benz", "countryId": null, "photo": null },
+    { "id": 6, "name": "Hyundai", "countryId": null, "photo": null },
+    { "id": 7, "name": "Isuzu", "countryId": null, "photo": null },
+    { "id": 8, "name": "Suzuki", "countryId": null, "photo": null },
+    { "id": 9, "name": "Honda", "countryId": null, "photo": null },
+    { "id": 10, "name": "Bajaj", "countryId": null, "photo": null },
+    { "id": 11, "name": "Tuk-Tuk (Bajaaj)", "countryId": null, "photo": null }
+  ],
+  "models": [
+    { "id": 1, "name": "Land Cruiser", "makeId": 1 },
+    { "id": 2, "name": "Hilux", "makeId": 1 },
+    { "id": 3, "name": "Corolla", "makeId": 1 },
+    { "id": 4, "name": "Camry", "makeId": 1 },
+    { "id": 5, "name": "Probox", "makeId": 1 },
+    { "id": 6, "name": "Vitz / Yaris", "makeId": 1 },
+    { "id": 7, "name": "Noah / Voxy", "makeId": 1 },
+    { "id": 8, "name": "Rav4", "makeId": 1 },
+    { "id": 9, "name": "Patrol", "makeId": 2 },
+    { "id": 10, "name": "Sunny", "makeId": 2 },
+    { "id": 11, "name": "X-Trail", "makeId": 2 },
+    { "id": 12, "name": "Pajero", "makeId": 3 },
+    { "id": 13, "name": "L200", "makeId": 3 },
+    { "id": 14, "name": "Defender", "makeId": 4 },
+    { "id": 15, "name": "Discovery", "makeId": 4 },
+    { "id": 16, "name": "Sprinter", "makeId": 5 },
+    { "id": 17, "name": "C-Class", "makeId": 5 },
+    { "id": 18, "name": "Tucson", "makeId": 6 },
+    { "id": 19, "name": "FVR Truck", "makeId": 7 },
+    { "id": 20, "name": "RE (Three-Wheeler)", "makeId": 10 }
+  ]
+}
